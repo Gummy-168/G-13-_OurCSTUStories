@@ -33,11 +33,15 @@ header {
 }
 
 .navigation a {
-    margin: 0 15px;
+    margin: 0 15px 0 100px;
     text-decoration: none;
     color: #4B2E2E;
     font-weight: bold;
     transition: color 0.3s ease;
+}
+
+main {
+    margin: 0 50px 50px;
 }
 
 .navigation a:hover {
@@ -51,14 +55,14 @@ header {
 }
 
 .welcome-section h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
     font-family: 'Jua', sans-serif;
 }
 
 .welcome-section .icons img {
-    height: 60px;
-    margin: 0 10px;
+    height: 150px;
+    margin: 0 5px;
     transition: transform 0.3s ease;
 }
 
@@ -131,7 +135,7 @@ header {
     background: #FFF;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     margin: 40px auto;
 }
 
@@ -156,6 +160,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-right: 25px;
 }
 
 .form-group label {
@@ -202,36 +207,49 @@ header {
 }
 
 /* comment-card*/
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
 .comment-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     background: #ffffff;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 350px;
-    word-wrap: break-word;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.comment-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.comment-header {
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-wrap: break-word;
+    min-height: 150px;
+}
+
+/* เอฟเฟกต์เมื่อเลื่อนเมาส์ */
+.comment-card:hover {
+    transform: scale(1.05);
+    /* การ์ดขยายเล็กน้อย */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* รูปแบบการจัดการศิลปะ */
+.comment-card:nth-child(odd) {
+    transform: translateY(-10px);
+    /* เลื่อนขึ้นเล็กน้อยสำหรับไอเท็มเลขคี่ */
+}
+
+.comment-card:nth-child(even) {
+    transform: translateY(10px);
+    /* เลื่อนลงเล็กน้อยสำหรับไอเท็มเลขคู่ */
 }
 
 .comment-avatar {
     width: 50px;
     height: 50px;
-    background: #FF4C4C;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
@@ -241,6 +259,7 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: #4B2E2E;
+    margin-bottom: 10px;
 }
 
 .comment-message {
@@ -253,13 +272,10 @@ header {
 .comment-stars {
     font-size: 20px;
     color: #FFC107;
-    align-self: center;
-    display: flex;
-    gap: 5px;
+    align-self: flex-start;
 }
 
 
-/* Footer */
 .footer {
     text-align: center;
     padding: 20px;

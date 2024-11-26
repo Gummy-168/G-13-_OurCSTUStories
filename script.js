@@ -2,32 +2,38 @@
 const guestBookForm = document.getElementById("guestBookForm");
 const commentsGrid = document.getElementById("commentsGrid");
 
+// สีที่ใช้ในวงกลมโปรไฟล์ (Avatar)
+const avatarColors = ["#FF4C4C", "#4C6EFF", "#4CE55A", "#FFC107"]; // แดง, น้ำเงิน, เขียว, เหลือง
+let currentColorIndex = 0; // ตัวนับสีเริ่มต้น
+
 // ฟังก์ชันสำหรับบันทึกความคิดเห็นลง Local Storage
 function saveCommentsToLocalStorage(comments) {
-  localStorage.setItem("comments", JSON.stringify(comments)); // แปลง Array เป็น JSON และบันทึก
+  localStorage.setItem("comments", JSON.stringify(comments));
 }
 
 // ฟังก์ชันสำหรับดึงความคิดเห็นจาก Local Storage
 function getCommentsFromLocalStorage() {
-  const comments = localStorage.getItem("comments"); // ดึงข้อมูล JSON
-  return comments ? JSON.parse(comments) : []; // แปลง JSON กลับเป็น Array
+  const comments = localStorage.getItem("comments");
+  return comments ? JSON.parse(comments) : [];
 }
 
 // ฟังก์ชันสำหรับแสดงความคิดเห็น
 function renderComments(comments) {
   commentsGrid.innerHTML = ""; // ล้างข้อมูลเดิมใน commentsGrid
-  comments.forEach((comment) => {
+  comments.forEach((comment, index) => {
     const commentCard = document.createElement("div");
     commentCard.classList.add("comment-card");
+
+    // สลับสีของ Avatar
+    const avatarColor = avatarColors[index % avatarColors.length]; // เลือกสีจาก Array
+
     commentCard.innerHTML = `
             <div class="comment-header">
-                <div class="comment-avatar"></div> <!-- รูปโปรไฟล์ -->
-                <p class="comment-name">${comment.name}</p> <!-- ชื่อ -->
+                <div class="comment-avatar" style="background: ${avatarColor};"></div> <!-- สีวงกลม -->
+                <p class="comment-name">${comment.name}</p>
             </div>
-            <p class="comment-message">${comment.message}</p> <!-- ข้อความ -->
-            <div class="comment-stars">${"⭐".repeat(
-              comment.rating
-            )}</div> <!-- ดาว -->
+            <p class="comment-message">${comment.message}</p>
+            <div class="comment-stars">${"⭐".repeat(comment.rating)}</div>
         `;
     commentsGrid.appendChild(commentCard);
   });
@@ -53,8 +59,16 @@ guestBookForm.addEventListener("submit", function (event) {
   }
 
   // เพิ่มความคิดเห็นใหม่ใน Array
-  const newComment = { name, message, rating };
+  const newComment = {
+    name,
+    message,
+    rating,
+    color: avatarColors[currentColorIndex],
+  };
   comments.push(newComment);
+
+  // อัปเดตสีให้วนไปสีถัดไป
+  currentColorIndex = (currentColorIndex + 1) % avatarColors.length; // วนกลับเมื่อครบชุดสี
 
   // บันทึกความคิดเห็นลง Local Storage
   saveCommentsToLocalStorage(comments);
