@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+    background: #FFF4E9;
+    color: #4B2E2E;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #FFF4E9;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navigation a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4B2E2E;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #E74C3C;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Jua', sans-serif;
+}
+
+.welcome-section .icons img {
+    height: 60px;
+    margin: 0 10px;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B2E2E;
+    font-family: 'Jua', sans-serif;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+}
+
+.team-card {
+    width: 250px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #FFF4E9;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.red-bar {
+    background: #FF4C4C;
+}
+
+.blue-bar {
+    background: #4C6EFF;
+}
+
+.green-bar {
+    background: #4CE55A;
+}
+
+
+/* Guest Book */
+.guest-book-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.guest-book {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guest-book input,
+.guest-book textarea,
+.guest-book select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background: #E74C3C;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #D8392A;
+}
+
+/* Guest Comments */
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.comment-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #4B2E2E;
+    color: #FFF;
+}
