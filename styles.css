@@ -1,9 +1,11 @@
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Jua', sans-serif;
     background: #FFF4E9;
     color: #4B2E2E;
+    line-height: 1.6;
 }
 
 header {
@@ -35,6 +37,7 @@ header {
     text-decoration: none;
     color: #4B2E2E;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navigation a:hover {
@@ -44,7 +47,7 @@ header {
 /* Welcome Section */
 .welcome-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .welcome-section h1 {
@@ -56,16 +59,21 @@ header {
 .welcome-section .icons img {
     height: 60px;
     margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.welcome-section .icons img:hover {
+    transform: scale(1.1);
 }
 
 /* Team Section */
 .team-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .team-section h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     color: #4B2E2E;
     font-family: 'Jua', sans-serif;
@@ -81,13 +89,18 @@ header {
 }
 
 .team-card {
-    width: 250px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #FFF4E9;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .bottom-bar {
@@ -111,59 +124,140 @@ header {
     background: #4CE55A;
 }
 
-
-/* Guest Book */
+/* Guest Book Section */
 .guest-book-section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-}
-
-.guest-book {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #FFFFFF;
+    background: #FFF;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.guest-book-section h2 {
+    font-family: 'Jua', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4B2E2E;
+}
+
+/* Form Styling */
+.guest-book {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4B2E2E;
+    text-align: left;
 }
 
 .guest-book input,
 .guest-book textarea,
 .guest-book select {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guest-book input:focus,
+.guest-book textarea:focus,
+.guest-book select:focus {
+    outline: none;
+    border-color: #4B2E2E;
+    box-shadow: 0 0 5px rgba(75, 46, 46, 0.3);
 }
 
 .submit-button {
     background: #E74C3C;
     color: #FFF;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
     background: #D8392A;
 }
 
-/* Guest Comments */
-.comments-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+/* comment-card*/
+.comment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 350px;
+    word-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.comment-card {
-    background: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    background: #FF4C4C;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+
+.comment-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B2E2E;
+}
+
+.comment-message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.comment-stars {
+    font-size: 20px;
+    color: #FFC107;
+    align-self: center;
+    display: flex;
+    gap: 5px;
+}
+
 
 /* Footer */
 .footer {
@@ -171,4 +265,22 @@ header {
     padding: 20px;
     background: #4B2E2E;
     color: #FFF;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 480px) {
+    .guest-book-section {
+        padding: 20px;
+    }
+
+    .guest-book {
+        gap: 15px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
