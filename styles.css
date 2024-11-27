@@ -4,6 +4,11 @@
     --color-background: #FFF4E9 ;
     --color-font: #562C28 ;
     --color-footer: #4B2E2E ;
+    --color-blue: #546FC9 ;
+    --color-green: #B4E77F ;
+    --color-yellow: #F1E561 ;
+    --color-pink: #FF5487 ;
+    --color-purple: #9A54C9 ;
 }
 
 body {
@@ -130,6 +135,88 @@ header nav a:hover {
     header nav a {
         font-size: 12px; 
     }
+}
+
+.talk-about-future {
+    text-align: center;
+}
+
+.talk-about-future h2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    color: var(--color-primary);
+    background-color: var(--color-footer);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.chat.right {
+    flex-direction: row-reverse;
+}
+
+.chat.right .text {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.circle.red {
+    background-color: var(--color-secondary);
+}
+
+.circle.blue {
+    background-color: var(--color-blue);
+}
+
+.circle.green {
+    background-color: var(--color-green);
+}
+
+.circle.yellow {
+    background-color: var(--color-yellow);
+}
+
+.circle.pink {
+    background-color: var(--color-pink);
+}
+
+.circle.purple {
+    background-color: var(--color-purple);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-font);
+    margin: 0;
 }
 
 .footer {
