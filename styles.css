@@ -48,13 +48,13 @@ main h1 {
 
 .journey-row {
     display: flex;
-    gap: 10px; 
+    gap: 30px; 
     align-items: stretch; 
 }
 
 
 .image-box {
-    flex: 0 %; 
+    flex: 20 %; 
     height: 400px; 
     display: flex;
     justify-content: center;
