@@ -216,3 +216,60 @@ main h1 {
   #toggleTheme:hover {
     transform: scale(1.2);
   }
+
+  /* Moon mode */
+body.light-mode {
+    background: #FFF4E9;
+    color: #4B2E2E;
+  }
+  
+  body.dark-mode {
+    background: #2E2E2E;
+    color: #FFF4E9;
+  }
+
+  body.dark-mode .welcome-section h1{
+    background: #2E2E2E;
+    color: #FFF4E9;
+  }
+
+
+  body.dark-mode .logo  {
+    background: #2E2E2E;
+    color: #FFF4E9;
+  }
+  
+  body.dark-mode  {
+    background: #2E2E2E;
+    color: #FFF4E9;
+  }  
+
+
+  body.dark-mode header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+  }
+  
+  body.dark-mode .navigation a {
+    color: #FFF;
+  }
+  
+  body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+  }
+  
+  body.dark-mode .team-section h2 {
+    color: #FFF;
+  }
+  
+  #toggleTheme {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+  }
+  
+  #toggleTheme:hover {
+    transform: scale(1.2);
+  }
