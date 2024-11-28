@@ -234,6 +234,47 @@ header nav a:hover {
     font-family: 'mali'; 
 }
 
+.message-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+    margin: 0px 24px;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Jua';
+}
+
+.message-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button img {
+    width: 30px;
+    height: 30pxว
+}
+
+.button:hover img {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
 .footer {
     text-align: center;
     padding: 20px;
