@@ -54,8 +54,8 @@ main h1 {
 
 /* กล่องรูปภาพ */
 .image-box {
-    flex: 0 0 30%; /* กำหนดให้กล่องรูป 30% */
-    height: 300px; /* สี่เหลี่ยมจัตุรัส */
+    flex: 0 %; /* กำหนดให้กล่องรูป 30% */
+    height: 400px; /* สี่เหลี่ยมจัตุรัส */
     display: flex;
     justify-content: center;
     align-items: center;
