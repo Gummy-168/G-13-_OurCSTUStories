@@ -239,6 +239,11 @@ main {
     margin-right: 25px;
 }
 
+.form-group .thai {
+    display: flex;
+    font-family: 'Mali', sans-serif;
+}
+
 .form-group label {
     font-size: 16px;
     font-weight: bold;
