@@ -155,27 +155,27 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 .chat {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
     width: 100%;
-    padding: 16px 0;
+    padding: 16px 24px;
     min-height: 140px;
     box-sizing: border-box;
+    height: 140px;
 }
 
 .chat.right {
     flex-direction: row-reverse;
-    justify-content: flex-end;
+}
+
+.chat.right .text {
+    text-align: right;
+    align-items: flex-end;
 }
 
 .chat.left {
@@ -183,8 +183,9 @@ header nav a:hover {
 }
 
 .chat.right .text, .chat.left .text {
-    align-items: flex-start;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
 }
 
 .circle {
@@ -208,7 +209,6 @@ header nav a:hover {
 .text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     text-align: left;
 }
 
@@ -218,6 +218,7 @@ header nav a:hover {
     color: var(--color-font);
     margin: 0;
 }
+
 
 .speech-bubble {
     background-color: var(--color-primary); 
