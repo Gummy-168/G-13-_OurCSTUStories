@@ -54,7 +54,7 @@ main h1 {
 
 
 .image-box {
-    flex: 20 %; 
+    flex: 0 0 20%; 
     height: 400px; 
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@ main h1 {
     line-height: 1.5;
 }
 
-g
+
 .footer {
     text-align: center;
     padding: 20px;
@@ -105,10 +105,34 @@ g
     height: 150px;     
     margin: 20px auto; 
     object-fit: cover; 
+}
     
+.fade_in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in;
 }
 
+.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade_in--visible {
+    animation: slideIn 2s ease-in-out;
+}
 
 
 
