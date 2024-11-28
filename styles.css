@@ -114,23 +114,23 @@ main {
     height: 60px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .red-bar {
-    background: #FF4C4C;
+    background: #c43333;
     color: white;
 }
 
 .blue-bar {
-    background: #4C6EFF;
+    background: #3048b5;
     color: white;
 }
 
 .green-bar {
-    background: #32c73e;
+    background: #25872d;
     color: white
 }
 
