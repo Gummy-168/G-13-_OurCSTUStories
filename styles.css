@@ -1,11 +1,26 @@
 /* Global Styles */
+@font-face {
+    font-family: 'PaniallureDemo';
+    src: url('./fonts/261panialluredemo-regular-webfont.woff2') format('woff2'),
+        url('./fonts/261panialluredemo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Jua', sans-serif;
+    font-family: 'PaniallureDemo', sans-serif;
+    font-feature-settings: 'liga' on, 'kern' on;
+    text-rendering: optimizeLegibility;
     background: #FFF4E9;
     color: #4B2E2E;
     line-height: 1.6;
+}
+
+body:lang(th) {
+    font-family: 'PaniallureDemo', sans-serif;
 }
 
 header {
@@ -47,6 +62,7 @@ main {
 .navigation a:hover {
     color: #E74C3C;
 }
+
 
 /* Welcome Section */
 .welcome-section {
