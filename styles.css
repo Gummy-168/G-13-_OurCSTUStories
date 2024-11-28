@@ -1,4 +1,4 @@
-/* สไตล์พื้นฐาน */
+
 body {
     font-family: 'Jua', sans-serif;
     background-color: #FFF4E9;
@@ -37,7 +37,7 @@ main h1 {
     margin: 10px 0;
 }
 
-/* Journey Section */
+
 .journey-section {
     display: flex;
     flex-direction: column;
@@ -45,17 +45,17 @@ main h1 {
     padding: 20px;
 }
 
-/* การจัดบรรทัดแต่ละแถว */
+
 .journey-row {
     display: flex;
-    gap: 10px; /* ระยะห่างระหว่างกล่อง */
-    align-items: stretch; /* ทำให้กล่องสูงเท่ากัน */
+    gap: 10px; 
+    align-items: stretch; 
 }
 
-/* กล่องรูปภาพ */
+
 .image-box {
-    flex: 0 %; /* กำหนดให้กล่องรูป 30% */
-    height: 400px; /* สี่เหลี่ยมจัตุรัส */
+    flex: 0 %; 
+    height: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,9 +72,9 @@ main h1 {
     border-radius: 10px;
 }
 
-/* กล่องข้อความ */
+
 .text-box {
-    flex: 1; /* กล่องข้อความขยายเต็มที่ */
+    flex: 1; 
     padding: 20px;
     background-color: #fff;
     border: 2px solid #ccc;
@@ -85,7 +85,7 @@ main h1 {
     line-height: 1.5;
 }
 
-/* Footer */
+g
 .footer {
     text-align: center;
     padding: 20px;
