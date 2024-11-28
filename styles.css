@@ -12,10 +12,6 @@ body {
     line-height: 1.6;
 }
 
-body:lang(th) {
-    font-family: 'Jua', sans-serif;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -169,6 +165,11 @@ main {
 }
 
 .bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    padding: 3px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -176,8 +177,16 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+
+.bottom-bar .thai p {
+    margin: 0;
+    font-family: 'Mali', sans-serif;
+}
+
+.bottom-bar p {
+    margin: 0;
 }
 
 .red-bar {
