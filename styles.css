@@ -16,6 +16,7 @@ body:lang(th) {
     font-family: 'Jua', sans-serif;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -66,6 +67,17 @@ main {
 
 .navigation a:hover {
     color: #E74C3C;
+}
+
+.fade_in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+
+.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
