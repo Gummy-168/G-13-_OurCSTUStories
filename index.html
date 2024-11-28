@@ -111,5 +111,28 @@
     <footer class="footer">
         <p>&copy; 2024 G13@CSTU. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const chatSections = document.querySelectorAll(".chat");
+    
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                }
+            );
+    
+            chatSections.forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    
 </body>
 </html>
