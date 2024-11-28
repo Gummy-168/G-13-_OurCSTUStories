@@ -11,8 +11,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 2px solid #ccc;
+    background-color: #FFF4E9;
+    color: #774936;
 }
 
 header .logo {
@@ -72,6 +72,9 @@ main h1 {
     border-radius: 10px;
 }
 
+.HOME {
+    color: #774936;
+}
 
 .text-box {
     flex: 1; 
