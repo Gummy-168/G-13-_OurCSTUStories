@@ -1,11 +1,10 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Jua', sans-serif;
-    font-weight: 400;
+    ;
     font-feature-settings: 'liga' on, 'kern' on;
     text-rendering: optimizeLegibility;
     background: #FFF4E9;
@@ -13,13 +12,9 @@ body {
     line-height: 1.6;
 }
 
-.thai {
-    font-family: 'Mali', sans-serif;
-    display: flex;
+body:lang(th) {
+    font-family: 'Jua', sans-serif;
 }
-
-
-
 
 header {
     display: flex;
@@ -57,9 +52,15 @@ header {
     object-fit: contain;
 }
 
+.navigation {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
 .navigation a {
-    margin: 0 15px 0 100px;
     text-decoration: none;
+    margin-right: 50px;
     color: #4B2E2E;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -362,12 +363,29 @@ body.dark-mode {
     color: #FFF4E9;
 }
 
+body.dark-mode header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+}
+
+body.dark-mode .navigation a {
+    color: #FFF;
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+}
+
+body.dark-mode .team-section h2 {
+    color: #FFF;
+}
+
 #toggleTheme {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
     background: transparent;
     border: none;
-    font-size: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
 #toggleTheme:hover {
