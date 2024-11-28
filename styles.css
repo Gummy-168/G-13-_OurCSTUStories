@@ -12,7 +12,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #FFF4E9;
-    color: #774936;
+    color: #4B2E2E;
     border-bottom: 1px solid #ccc;
 }
 
@@ -24,7 +24,7 @@ header .logo {
 header nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #4B2E2E;
 }
 
 main {
@@ -34,7 +34,7 @@ main {
 
 main h1 {
     font-size: 36px;
-    color: #774936;
+    color: #4B2E2E;
     margin: 10px 0;
 }
 
@@ -74,7 +74,7 @@ main h1 {
 }
 
 .HOME {
-    color: #774936;
+    color: #4B2E2E;
 }
 
 .text-box {
@@ -181,4 +181,38 @@ main h1 {
   .icons img {
     width: 50%;
     object-fit: contain;
+  }
+
+  /* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Jua', sans-serif;
+  }
+  
+  .welcome-section .icons img {
+    height: 150px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .welcome-section .icons img:hover {
+    transform: scale(1.1);
+  }
+
+  #toggleTheme {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+  }
+  
+  #toggleTheme:hover {
+    transform: scale(1.2);
   }
