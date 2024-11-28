@@ -1,7 +1,119 @@
+/* สไตล์พื้นฐาน */
+body {
+    font-family: 'Jua', sans-serif;
+    background-color: #FFF4E9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  header .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  main h1 {
+    font-size: 36px;
+    color: #774936;
+    margin: 10px 0;
+  }
+  
+  main p {
+    font-size: 16px;
+    color: #774936;
+    margin-bottom: 20px;
+  }
+  
+  /* Journey Section */
+  .journey-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 กล่องต่อแถว */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .journey-box {
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .journey-box .star {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 24px;
+  }
+  
+  .journey-box .image-placeholder {
+    height: 150px;
+    width: 150px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  .journey-box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .journey-box p {
+    font-size: 14px;
+    color: #555;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #4B2E2E;
+    color: #FFF;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .image-placeholder img {
+    width: 100%;      /* ทำให้ภาพเต็มขนาดของกล่อง */
+    height: 100%;     /* ทำให้ภาพเต็มความสูงของกล่อง */
+    object-fit: cover; /* ทำให้ภาพขยายเต็มกล่อง โดยที่ภาพไม่ผิดสัดส่วน */
+  }
 
-* {
-    
-    background-color: #FFF4E9;   
-}
+
+
 
 
