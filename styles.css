@@ -17,6 +17,8 @@ body:lang(th) {
 }
 
 
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -80,6 +82,22 @@ main {
     transform: translateY(0);
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade_in--visible {
+    animation: slideIn 2s ease-in-out;
+}
+
 
 /* Welcome Section */
 .welcome-section {
@@ -126,7 +144,7 @@ main {
 }
 
 .team-card {
-    height: 300px;
+    height: 400px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #FFF4E9;
@@ -330,6 +348,32 @@ main {
     font-size: 14px;
     margin-top: 20px;
 }
+
+/* Moon mode */
+body.light-mode {
+    background: #FFF4E9;
+    color: #4B2E2E;
+}
+
+body.dark-mode {
+    background: #2E2E2E;
+    color: #FFF4E9;
+}
+
+#toggleTheme {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.2);
+}
+
+
+
 
 @media (max-width: 768px) {
     .team-grid {

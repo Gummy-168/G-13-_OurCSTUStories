@@ -84,14 +84,14 @@ guestBookForm.addEventListener("submit", function (event) {
 const paragraphs = document.querySelectorAll(".fade_in");
 
 document.addEventListener("scroll", function () {
-  paragraphs.forEach((paragraphs) => {
-    if (isInviwe(paragraphs)) {
-      paragraphs.classList.add("fade_in--visible");
+  paragraphs.forEach((paragraph) => {
+    if (isInView(paragraph)) {
+      paragraph.classList.add("fade_in--visible");
     }
   });
 });
 
-function isInviwe(element) {
+function isInView(element) {
   const rect = element.getBoundingClientRect();
   return (
     rect.bottom > 0 &&
@@ -99,3 +99,10 @@ function isInviwe(element) {
       (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
   );
 }
+// Moon mod
+const toggleThemeButton = document.getElementById("toggleTheme");
+
+toggleThemeButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("light-mode");
+});
