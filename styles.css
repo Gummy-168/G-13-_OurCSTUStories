@@ -32,6 +32,18 @@ header {
     font-size: 18px;
 }
 
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icons img {
+    width: 50%;
+    object-fit: contain;
+}
+
 .navigation a {
     margin: 0 15px 0 100px;
     text-decoration: none;
@@ -298,6 +310,11 @@ main {
     margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 480px) {
     .team-grid {
@@ -318,8 +335,3 @@ main {
     }
 }
 
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
