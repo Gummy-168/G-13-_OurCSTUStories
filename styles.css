@@ -406,15 +406,15 @@ body.dark-mode {
 
 body.dark-mode #toggleMusic {
     padding: 5px;
-    background-color: #FFF; 
+    background-color: #FFF;
     border-radius: 50px;
-  }
-  
-  body.dark-mode #toggleMusic:hover {
+}
+
+body.dark-mode #toggleMusic:hover {
     padding: 5px;
-    background-color: #fffc41; 
+    background-color: #fffc41;
     border-radius: 50px;
-  }
+}
 
 body.dark-mode .parallax-section {
     background-image: url('resource/Night mode stardew.webp');
@@ -555,9 +555,9 @@ body.dark-mode .team-section h2 {
 
     nav.navigation {
         display: flex;
-        justify-content: center;  
-        gap: 20px;                
-        width: 100%;          
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
     }
 
     .navigation a {
@@ -588,6 +588,18 @@ body.dark-mode .team-section h2 {
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    .welcome-section h1 {
+        font-size: 40px;
+    }
+
+    .welcome-section .icons img {
+        width: 200px;
+    }
+
+    .parallax-section{
+        height: 60vh;
     }
 }
 
@@ -617,10 +629,10 @@ body.dark-mode .team-section h2 {
 
     .navigation {
         display: flex;
-        justify-content: center;  
-        flex-wrap: nowrap;        
-        gap: 20px;                
-        width: 100%;            
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: 100%;
     }
 
     .navigation a {
@@ -635,6 +647,29 @@ body.dark-mode .team-section h2 {
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    .welcome-section {
+        padding: 30px 10px; 
+    }
+
+    .welcome-section h1 {
+        font-size: 30px; 
+    }
+
+    .welcome-section .icons img {
+        height: 100px;
+        margin: 0 3px; 
+    }
+
+    .welcome-section .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .parallax-section{
+        height: 40vh;
     }
 }
 
@@ -660,9 +695,9 @@ body.dark-mode .team-section h2 {
 
     .navigation {
         display: flex;
-        justify-content: center;  
+        justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;               
+        gap: 15px;
         margin-top: 8px;
     }
 
@@ -671,7 +706,7 @@ body.dark-mode .team-section h2 {
     }
 
     .navigation a {
-        font-size: 12px;         
+        font-size: 12px;
     }
 
     #toggleTheme {
@@ -680,11 +715,15 @@ body.dark-mode .team-section h2 {
     }
 
     .welcome-section h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .submit-button {
         padding: 8px;
         font-size: 12px;
+    }
+
+    .parallax-section{
+        height: 20vh;
     }
 }
