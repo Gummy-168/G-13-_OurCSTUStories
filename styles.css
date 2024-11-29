@@ -1,0 +1,506 @@
+:root {
+    --color-primary: #FEFEFC;
+    --color-secondary: #FF5454;
+    --color-background: #FFF4E9;
+    --color-font: #562C28;
+    --color-footer: #4B2E2E;
+    --color-blue: #546FC9;
+    --color-green: #B4E77F;
+    --color-yellow: #F1E561;
+    --color-pink: #FF5487;
+    --color-purple: #9A54C9;
+}
+
+main {
+    margin: 0 50px 50px;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-background);
+    color: var(--color-font);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-font);
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--color-font);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-secondary);
+}
+
+.aim {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-inline: 52px;
+    padding-top: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.aim-left1 {
+    font-size: 48px;
+    color: var(--color-font);
+    margin-bottom: 5vh;
+}
+
+.aim-left2 {
+    display: none;
+}
+
+.aim-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.aim-right img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+
+    .aim-left1 {
+        font-size: 36px;
+        margin-bottom: 4vh;
+    }
+
+    .aim-right {
+        justify-content: center;
+    }
+
+    .aim-right img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .aim {
+        grid-template-columns: 1fr;
+        padding-inline: 20px;
+
+    }
+
+    .aim-left1 {
+        display: none;
+    }
+
+    .aim-left2 {
+        display: contents;
+        font-size: 20px;
+        color: var(--color-font);
+        text-align: center;
+    }
+
+    .aim-right img {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+}
+
+.talk-about-future {
+    text-align: center;
+}
+
+.talk-about-future h2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    color: var(--color-primary);
+    background-color: var(--color-footer);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 16px 24px;
+    min-height: 140px;
+    box-sizing: border-box;
+    height: 140px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.chat.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chat.right {
+    flex-direction: row-reverse;
+}
+
+.chat.right .text {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.chat.left {
+    flex-direction: row;
+}
+
+.chat.right .text,
+.chat.left .text {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.chat .circle1 {
+    background-image: url('resources/yeewha.jpg');
+}
+
+.chat .circle2 {
+    background-image: url('resources/Namtan.jpg');
+}
+
+.chat .circle3 {
+    background-image: url('resources/Titi.jpg');
+}
+
+.chat .circle4 {
+    background-image: url('resources/Puji.jpg');
+}
+
+.chat .circle5 {
+    background-image: url('resources/Warm.jpg');
+}
+
+.chat .circle6 {
+    background-image: url('resources/Focus.jpg');
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-font);
+    margin: 0;
+}
+
+
+.speech-bubble {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: var(--color-font);
+    max-width: 300px;
+    word-wrap: break-word;
+    position: relative;
+    margin: 10px;
+    font-family: 'mali';
+}
+
+.message-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+    margin: 0px 24px;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Jua';
+}
+
+.message-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button img {
+    width: 30px;
+    height: 30pxว
+}
+
+.button:hover img {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-footer);
+    color: var(--color-primary);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/*fade_in*/
+.fade_in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.parallax-section.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* header */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navigation {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    margin-right: 50px;
+    color: #4B2E2E;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #E74C3C;
+}
+
+/*controls*/
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleTheme,
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* Moon mode */
+body.light-mode {
+    background: #FFF4E9;
+    color: #4B2E2E;
+}
+
+body.dark-mode {
+    background: #2E2E2E;
+    color: #FFF4E9;
+}
+
+body.dark-mode #toggleMusic {
+    padding: 5px;
+    background-color: #FFF;
+    border-radius: 50px;
+}
+
+body.dark-mode #toggleMusic:hover {
+    padding: 5px;
+    background-color: #fffc41;
+    border-radius: 50px;
+}
+
+body.dark-mode .parallax-section {
+    background-image: url('resource/Night mode stardew.webp');
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+}
+
+body.dark-mode .navigation a {
+    color: #FFF;
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+}
+
+body.dark-mode .team-section h2 {
+    color: #FFF;
+}
+
+#toggleTheme {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.2);
+}
+
+/*ควบคุมเพลงสุดโปรดดดด*/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
