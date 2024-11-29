@@ -13,10 +13,10 @@ window.addEventListener("scroll", function () {
     }
   });
 
-  const scrollTop = window.scrollY; // Use modern property
+  const scrollTop = window.scrollY;
   const parallaxContent = document.querySelector(".parallax-content");
   if (parallaxContent) {
-    parallaxContent.style.transform = `translateY(${scrollTop * 0.3}px)`; // Fixed template literal
+    parallaxContent.style.transform = `translateY(${scrollTop * 0.3}px)`;
   }
 });
 
@@ -98,4 +98,42 @@ musicToggleButton.addEventListener("click", () => {
 
 volumeControl.addEventListener("input", (event) => {
   backgroundMusic.volume = event.target.value;
+});
+
+// arrow
+document.addEventListener("DOMContentLoaded", () => {
+  const arrow = document.getElementById("arrow");
+  const target = document.getElementById("target");
+
+  const moveArrowToTarget = () => {
+    const targetRect = target.getBoundingClientRect();
+    const arrowRect = arrow.getBoundingClientRect();
+
+    const horizontalAdjustment =
+      targetRect.left -
+      arrowRect.left +
+      (targetRect.width - arrowRect.width) / 2;
+    const verticalAdjustment =
+      targetRect.top -
+      arrowRect.top +
+      (targetRect.height - arrowRect.height) / 2;
+
+    arrow.style.transform = `translate(${horizontalAdjustment}px, ${verticalAdjustment}px)`;
+  };
+
+  setTimeout(moveArrowToTarget, 1000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const arrow = document.getElementById("arrow");
+
+  // เพิ่ม class เพื่อเริ่มแอนิเมชัน
+  setTimeout(() => {
+    arrow.classList.add("animate");
+  }, 1000); // เริ่มหลังจาก 1 วินาที
+});
+
+arrow.addEventListener("animationend", () => {
+  const hitSound = new Audio("resources/hit.mp3");
+  hitSound.play();
 });

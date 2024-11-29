@@ -504,3 +504,33 @@ body.dark-mode .team-section h2 {
     width: 100px;
     cursor: pointer;
 }
+
+/*arrow*/
+
+#arrow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    animation: none;
+}
+
+@keyframes arrowFly {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    70% {
+        transform: translate(300%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(800%, -50%) scale(1);
+    }
+}
+
+/* แอนิเมชันเมื่อถูกกระตุ้น */
+#arrow.animate {
+    animation: arrowFly 2s ease-in-out forwards;
+}
