@@ -179,6 +179,18 @@ body.dark-mode {
   color: #FFF4E9;
 }
 
+body.dark-mode #toggleMusic {
+  padding: 5px;
+  background-color: #FFF; 
+  border-radius: 50px;
+}
+
+body.dark-mode #toggleMusic:hover {
+  padding: 5px;
+  background-color: #fffc41; 
+  border-radius: 50px;
+}
+
 body.dark-mode .logo span{
   background-color: #2E2E2E;
   color: #FFF4E9;
@@ -250,18 +262,19 @@ body.dark-mode .logo {
     gap: 10px;
 }
 
-#toggleTheme,
 #toggleMusic {
-    font-size: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+  font-size: 20px;
+  background: transparent; 
+  border: none;
+  color: #4B2E2E; 
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-#toggleTheme:hover,
 #toggleMusic:hover {
-    transform: scale(1.2);
+  color: #FFAA33; 
+  background-color: #FFF4E9; 
+  border-radius: 50%; 
 }
 
 #volumeControl {
