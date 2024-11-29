@@ -143,29 +143,39 @@ window.addEventListener("scroll", function () {
 });
 
 // ควบคุวเพลง
+// Music Controls
 const musicToggleButton = document.getElementById("toggleMusic");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const volumeControl = document.getElementById("volumeControl");
 
-let isMusicPlaying = false;
+let isMusicPlaying = true; // Assume music is playing on load
 
+// Play music automatically on page load
+window.addEventListener("load", () => {
+  backgroundMusic.volume = 0.5; // Default volume
+  backgroundMusic.play().catch((error) => {
+    console.warn("Autoplay failed. User interaction required.", error);
+    musicToggleButton.textContent = "🔇"; // Show play icon
+    isMusicPlaying = false;
+  });
+  musicToggleButton.textContent = "🎵"; // Show mute icon
+});
+
+// Toggle Music Playback
 musicToggleButton.addEventListener("click", () => {
   if (isMusicPlaying) {
     backgroundMusic.pause();
-    musicToggleButton.textContent = "🎵";
+    musicToggleButton.textContent = "🔇"; // Show play icon
   } else {
-    backgroundMusic.play();
-    musicToggleButton.textContent = "🔇";
+    backgroundMusic.play().catch((error) => {
+      console.warn("Playback error:", error);
+    });
+    musicToggleButton.textContent = "🎵"; // Show mute icon
   }
   isMusicPlaying = !isMusicPlaying;
 });
 
+// Volume Control
 volumeControl.addEventListener("input", (event) => {
-  backgroundMusic.volume = event.target.value;
-});
-
-window.addEventListener("load", () => {
-  backgroundMusic.pause();
-  backgroundMusic.volume = 0.5;
-  musicToggleButton.textContent = "🎵";
+  backgroundMusic.volume = event.target.value; // Adjust volume
 });
