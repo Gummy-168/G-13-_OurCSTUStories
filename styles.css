@@ -242,3 +242,28 @@ body.dark-mode .logo {
   margin-left: -2px; /* ปรับถ้าต้องการชิดมากขึ้น */
 }
 
+/ควบคุมเพลงสุดโปรดดดด/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleTheme,
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}

@@ -45,3 +45,38 @@ if (toggleThemeButton) {
 } else {
   console.error("ไม่พบปุ่ม toggleTheme ใน DOM");
 }
+
+// ควบคุวเพลง
+const musicToggleButton = document.getElementById("toggleMusic");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const volumeControl = document.getElementById("volumeControl");
+
+let isMusicPlaying = true; 
+
+window.addEventListener("load", () => {
+  backgroundMusic.volume = 0.5; 
+  backgroundMusic.play().catch((error) => {
+    console.warn("Autoplay failed. User interaction required.", error);
+    musicToggleButton.textContent = "🔇"; 
+    isMusicPlaying = false;
+  });
+  musicToggleButton.textContent = "🎵"; 
+});
+
+musicToggleButton.addEventListener("click", () => {
+  if (isMusicPlaying) {
+    backgroundMusic.pause();
+    musicToggleButton.textContent = "🔇"; 
+  } else {
+    backgroundMusic.play().catch((error) => {
+      console.warn("Playback error:", error);
+    });
+    musicToggleButton.textContent = "🎵"; 
+  }
+  isMusicPlaying = !isMusicPlaying;
+});
+
+
+volumeControl.addEventListener("input", (event) => {
+  backgroundMusic.volume = event.target.value; 
+});
