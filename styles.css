@@ -10,7 +10,7 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* จัดตำแหน่งแบบกระจายให้ทั้งสองฝั่ง */
   align-items: center;
   padding: 20px;
   background-color: #FFF4E9;
@@ -25,14 +25,14 @@ header .logo {
 
 header .navigation {
   display: flex;
-  gap: 20px;
+  align-items: center; /* จัดให้อิลิเมนต์ใน navigation อยู่ในแนวเดียวกัน */
+  gap: 20px; /* เพิ่มช่องว่างระหว่างลิงก์ */
 }
 
 header .navigation a {
   text-decoration: none;
   color: #4B2E2E;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 header .navigation a:hover {
@@ -224,13 +224,15 @@ body.dark-mode .logo {
 
 .logo {
   display: flex;
-  align-items: center;
-  gap: 0; /* ไม่มีช่องว่างระหว่างรูปภาพกับข้อความ */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.logo img {
-  height: 40px; /* ปรับความสูงของโลโก้ */
-  width: auto; /* คงอัตราส่วนรูป */
+.logo-image {
+  width: 30px; /* ขนาดของโลโก้ */
+  height: 30px; /* ขนาดของโลโก้ */
+  margin-right: 10px; /* ช่องว่างระหว่างโลโก้กับข้อความ */
 }
 
 .logo span {
