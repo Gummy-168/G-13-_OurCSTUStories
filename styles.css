@@ -515,23 +515,58 @@ body.dark-mode .team-section h2 {
     background-color: #f4f4f4;
 }
 
+/*ควบคุมเพลงสุดโปรดดดด*/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleTheme,
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .team-card {
-        max-width: 100%; 
+        max-width: 100%;
     }
+
+    nav.navigation {
+        display: flex;
+        justify-content: center;  
+        gap: 20px;                
+        width: 100%;          
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
     header {
-        position: relative;
         padding: 15px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 10px;
-        text-align: center; 
+        text-align: center;
     }
 
     .logo {
@@ -541,15 +576,11 @@ body.dark-mode .team-section h2 {
         gap: 5px;
         text-align: center;
     }
-    
-    .navigation {
-        text-align: center;
-    }
 
     #toggleTheme {
         position: absolute;
         top: 15px;
-        right: 60px; 
+        right: 60px;
         font-size: 20px;
         background: none;
         border: none;
@@ -570,7 +601,7 @@ body.dark-mode .team-section h2 {
         align-items: center;
         justify-content: center;
         gap: 10px;
-        text-align: center; 
+        text-align: center;
     }
 
     .logo {
@@ -580,11 +611,15 @@ body.dark-mode .team-section h2 {
         gap: 5px;
         text-align: center;
     }
+
     .navigation {
         display: flex;
         justify-content: center;  
-        flex-wrap: nowrap;            
+        flex-wrap: nowrap;        
+        gap: 20px;                
+        width: 100%;            
     }
+
     .navigation a {
         text-align: center;
     }
@@ -592,7 +627,7 @@ body.dark-mode .team-section h2 {
     #toggleTheme {
         position: absolute;
         top: 15px;
-        right: 60px; 
+        right: 60px;
         font-size: 20px;
         background: none;
         border: none;
@@ -622,9 +657,9 @@ body.dark-mode .team-section h2 {
 
     .navigation {
         display: flex;
-        justify-content: center;
+        justify-content: center;  
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 15px;               
         margin-top: 8px;
     }
 
@@ -633,7 +668,7 @@ body.dark-mode .team-section h2 {
     }
 
     .navigation a {
-        font-size: 12px;
+        font-size: 12px;         
     }
 
     #toggleTheme {

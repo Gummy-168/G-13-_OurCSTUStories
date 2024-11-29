@@ -141,3 +141,31 @@ window.addEventListener("scroll", function () {
     icon.style.transform = `translateY(${scrollTop * speed}px)`;
   });
 });
+
+// ควบคุวเพลง
+const musicToggleButton = document.getElementById("toggleMusic");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const volumeControl = document.getElementById("volumeControl");
+
+let isMusicPlaying = false;
+
+musicToggleButton.addEventListener("click", () => {
+  if (isMusicPlaying) {
+    backgroundMusic.pause();
+    musicToggleButton.textContent = "🎵";
+  } else {
+    backgroundMusic.play();
+    musicToggleButton.textContent = "🔇";
+  }
+  isMusicPlaying = !isMusicPlaying;
+});
+
+volumeControl.addEventListener("input", (event) => {
+  backgroundMusic.volume = event.target.value;
+});
+
+window.addEventListener("load", () => {
+  backgroundMusic.pause();
+  backgroundMusic.volume = 0.5;
+  musicToggleButton.textContent = "🎵";
+});
