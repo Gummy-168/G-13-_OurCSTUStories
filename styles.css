@@ -253,7 +253,7 @@ header nav a:hover {
 .speech-bubble {
     background-color: var(--color-primary);
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 20px 25px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: var(--color-font);
@@ -435,6 +435,9 @@ body.dark-mode {
     color: #FFF4E9;
 }
 
+
+
+
 body.dark-mode #toggleMusic {
     padding: 5px;
     background-color: #FFF;
@@ -505,6 +508,7 @@ body.dark-mode .team-section h2 {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /*arrow*/
 
 #arrow {
@@ -534,3 +538,62 @@ body.dark-mode .team-section h2 {
 #arrow.animate {
     animation: arrowFly 2s ease-in-out forwards;
 }
+=======
+
+body.dark-mode {
+    background: #2E2E2E; 
+    color: #FFF; 
+}
+
+
+body.dark-mode .footer {
+    background: var(--color-footer); 
+    color: var(--color-primary); 
+}
+
+
+body.dark-mode header {
+    background-color: #333; 
+    color: #FFF; 
+}
+
+body.dark-mode .navigation a {
+    color: #FFF; 
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33; 
+}
+
+
+body.dark-mode .logo span {
+    color: #FFF; 
+}
+
+
+body.dark-mode .aim-left1, 
+body.dark-mode .aim-left2 {
+    color: #FFF; 
+}
+
+
+body.dark-mode .speech-bubble {
+    background-color: #333; 
+    color: #FFF; 
+}
+
+
+body.dark-mode #toggleTheme,
+body.dark-mode #toggleMusic {
+    color: #FFF; 
+}
+
+body.dark-mode #volumeControl {
+    background-color: #444; 
+}
+
+
+body.dark-mode .chat .text p {
+    color: #FFFFFF; 
+}
+>>>>>>> 35554d134aa871491f6ebb8965b457bf860b6d63
