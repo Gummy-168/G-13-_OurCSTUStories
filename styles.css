@@ -178,6 +178,11 @@ body.dark-mode {
   color: #FFF4E9;
 }
 
+body.dark-mode .logo span{
+  background-color: #2E2E2E;
+  color: #FFF4E9;
+}
+
 body.dark-mode header {
   background-color: #333;
   border-bottom: 1px solid #555;
@@ -214,6 +219,8 @@ body.dark-mode .logo {
   background: #2E2E2E;
   color: #FFF4E9;
 }
+
+
 
 .logo {
   display: flex;
