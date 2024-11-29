@@ -76,43 +76,43 @@ guestBookForm.addEventListener("submit", function (event) {
   // แสดงความคิดเห็นใหม่
   renderComments(comments);
 
-  // ล้างฟอร์มหลังจากส่งเสร็จ
   guestBookForm.reset();
 });
 
 // Fade-in
-const paragraphs = document.querySelectorAll(".fade_in");
+function isElementInView(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
 
-document.addEventListener("scroll", function () {
-  paragraphs.forEach((paragraph) => {
-    if (isInView(paragraph)) {
-      paragraph.classList.add("fade_in--visible");
+window.addEventListener("scroll", function () {
+  const fadeElements = document.querySelectorAll(".fade_in");
+
+  fadeElements.forEach((el) => {
+    if (isElementInView(el)) {
+      el.classList.add("fade_in--visible");
     }
   });
+
+  const scrollTop = window.pageYOffset;
+  const parallaxContent = document.querySelector(".parallax-content");
+  if (parallaxContent) {
+    parallaxContent.style.transform = `translateY(${scrollTop * 0.3}px)`;
+  }
 });
 
-function isInView(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.bottom > 0 &&
-    rect.top <
-      (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
-  );
-}
 // Moon mod
 const toggleThemeButton = document.getElementById("toggleTheme");
-console.log("Toggle Theme Button:", toggleThemeButton); // ✅ ตรวจสอบการเชื่อมโยง
+console.log("Toggle Theme Button:", toggleThemeButton);
 
 if (toggleThemeButton) {
-  // เพิ่ม Event Listener เมื่อคลิกปุ่ม
   toggleThemeButton.addEventListener("click", () => {
-    console.log("Theme Toggle Clicked!"); // ✅ ตรวจสอบว่าปุ่มถูกคลิก
+    console.log("Theme Toggle Clicked!");
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 
-    console.log("Body Classes After Toggle:", document.body.classList); // ✅ ตรวจสอบการเปลี่ยนคลาส
+    console.log("Body Classes After Toggle:", document.body.classList);
 
-    // เปลี่ยนไอคอน 🌙/☀️
     if (document.body.classList.contains("dark-mode")) {
       toggleThemeButton.textContent = "☀️";
     } else {
@@ -120,9 +120,24 @@ if (toggleThemeButton) {
     }
   });
 
-  // ตั้งค่าเริ่มต้นเป็น Light Mode
-  console.log("Initial Body Classes:", document.body.classList); // ✅ ตรวจสอบสถานะเริ่มต้น
+  console.log("Initial Body Classes:", document.body.classList);
   document.body.classList.add("light-mode");
 } else {
   console.error("ไม่พบปุ่ม toggleTheme ใน DOM");
 }
+
+// Parallax
+window.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset;
+
+  const parallaxSection = document.querySelector(".parallax-section");
+  if (parallaxSection) {
+    parallaxSection.style.backgroundPositionY = `${scrollTop * 0.5}px`;
+  }
+
+  const icons = document.querySelectorAll(".icons img");
+  icons.forEach((icon, index) => {
+    const speed = 0.3 + index * 0.1;
+    icon.style.transform = `translateY(${scrollTop * speed}px)`;
+  });
+});

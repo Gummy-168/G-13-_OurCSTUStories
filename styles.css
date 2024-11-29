@@ -1,5 +1,10 @@
 /* Global Styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -24,6 +29,7 @@ header {
 .thai {
     font-family: 'Mali', sans-serif;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -75,14 +81,39 @@ main {
 
 .fade_in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 
 .fade_in--visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+.parallax-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.parallax-section.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @keyframes slideIn {
     from {
@@ -95,11 +126,6 @@ main {
         transform: translateX(0);
     }
 }
-
-.fade_in--visible {
-    animation: slideIn 2s ease-in-out;
-}
-
 
 /* Welcome Section */
 .welcome-section {
@@ -126,7 +152,11 @@ main {
 /* Team Section */
 .team-section {
     text-align: center;
-    padding: 50px 20px;
+    position: relative;
+    background: url('##') center / cover no-repeat fixed;
+    padding: 100px 20px;
+    color: white;
+    z-index: 1;
 }
 
 .team-section h2 {
@@ -380,6 +410,11 @@ body.dark-mode {
     color: #FFF4E9;
 }
 
+body.dark-mode .parallax-section {
+    background-image: url('resource/Night mode stardew.webp');
+    color: white;
+}
+
 body.dark-mode header {
     background-color: #333;
     border-bottom: 1px solid #555;
@@ -408,6 +443,76 @@ body.dark-mode .team-section h2 {
 #toggleTheme:hover {
     transform: scale(1.2);
 }
+
+/* Parallax */
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('resource/Stardew Bg.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.parallax-section.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    transform: translateZ(0);
+}
+
+.parallax-content h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease-out;
+}
+
+.icons img {
+    margin-top: 100px;
+    width: 550px;
+    height: auto;
+    transition: transform 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#section1 {
+    background-image: url('resource/Stardew Bg.png');
+}
+
+#section2 {
+    background-image: url('path/to/your/image2.jpg');
+}
+
+.content-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+
 
 
 
