@@ -242,7 +242,7 @@ body.dark-mode .logo {
   margin-left: -2px; /* ปรับถ้าต้องการชิดมากขึ้น */
 }
 
-/ควบคุมเพลงสุดโปรดดดด/
+
 .controls {
     display: flex;
     align-items: center;
