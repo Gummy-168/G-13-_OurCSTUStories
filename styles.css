@@ -1,5 +1,10 @@
 /* Global Styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +29,6 @@ header {
 .thai {
     font-family: 'Mali', sans-serif;
 }
-
 .logo {
     display: flex;
     align-items: center;
@@ -76,14 +80,39 @@ main {
 
 .fade_in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 
 .fade_in--visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+.parallax-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.parallax-section.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @keyframes slideIn {
     from {
@@ -96,11 +125,6 @@ main {
         transform: translateX(0);
     }
 }
-
-.fade_in--visible {
-    animation: slideIn 2s ease-in-out;
-}
-
 
 /* Welcome Section */
 .welcome-section {
@@ -127,7 +151,11 @@ main {
 /* Team Section */
 .team-section {
     text-align: center;
-    padding: 50px 20px;
+    position: relative;
+    background: url('##') center / cover no-repeat fixed;
+    padding: 100px 20px;
+    color: white;
+    z-index: 1;
 }
 
 .team-section h2 {
@@ -381,6 +409,11 @@ body.dark-mode {
     color: #FFF4E9;
 }
 
+body.dark-mode .parallax-section {
+    background-image: url('resource/Night mode stardew.webp');
+    color: white;
+}
+
 body.dark-mode header {
     background-color: #333;
     border-bottom: 1px solid #555;
@@ -408,12 +441,6 @@ body.dark-mode .team-section h2 {
 
 #toggleTheme:hover {
     transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 480px) {
@@ -453,7 +480,7 @@ body.dark-mode .team-section h2 {
 
     .navigation {
         display: flex;
-        justify-content: center;
+        justify-content: center; /* จัดให้อยู่ตรงกลาง */
         flex-wrap: nowrap;
         gap: 20px;
         margin-top: 10px;
