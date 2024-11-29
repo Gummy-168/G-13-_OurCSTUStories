@@ -214,3 +214,21 @@ body.dark-mode .logo {
   background: #2E2E2E;
   color: #FFF4E9;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0; /* ไม่มีช่องว่างระหว่างรูปภาพกับข้อความ */
+}
+
+.logo img {
+  height: 40px; /* ปรับความสูงของโลโก้ */
+  width: auto; /* คงอัตราส่วนรูป */
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4B2E2E;
+  margin-left: -2px; /* ปรับถ้าต้องการชิดมากขึ้น */
+}
