@@ -21,7 +21,16 @@
             <a class="top" href="#journey">JOURNEY</a>
             <a class="top" href="#future">FUTURE</a>
         </nav>
-        <button id="toggleTheme">🌙</button>
+        <div class="controls">
+            <button id="toggleTheme">🌙</button>
+            <button id="toggleMusic">🎵</button>
+            <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5">
+            <audio id="backgroundMusic" loop>
+                <source src="resource/SnapSave.io - Stardew Valley OST - Fall (Ghost Synth) (320 kbps).mp3"
+                    type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </header>
 
     <main>

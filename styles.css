@@ -512,6 +512,33 @@ body.dark-mode .team-section h2 {
     background-color: #f4f4f4;
 }
 
+/*ควบคุมเพลงสุดโปรดดดด*/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleTheme,
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
+
+
 
 
 @media (max-width: 480px) {
