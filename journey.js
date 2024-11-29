@@ -1,4 +1,4 @@
-// Fade-in
+
 const paragraphs = document.querySelectorAll(".fade_in");
 
 document.addEventListener("scroll", function () {
@@ -18,20 +18,20 @@ function isInView(element) {
   );
 }
 
-// Moon mod
+
 const toggleThemeButton = document.getElementById("toggleTheme");
-console.log("Toggle Theme Button:", toggleThemeButton); // ✅ ตรวจสอบการเชื่อมโยง
+console.log("Toggle Theme Button:", toggleThemeButton); 
 
 if (toggleThemeButton) {
-  // เพิ่ม Event Listener เมื่อคลิกปุ่ม
+  
   toggleThemeButton.addEventListener("click", () => {
-    console.log("Theme Toggle Clicked!"); // ✅ ตรวจสอบว่าปุ่มถูกคลิก
+    console.log("Theme Toggle Clicked!"); 
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 
-    console.log("Body Classes After Toggle:", document.body.classList); // ✅ ตรวจสอบการเปลี่ยนคลาส
+    console.log("Body Classes After Toggle:", document.body.classList); 
 
-    // เปลี่ยนไอคอน 🌙/☀️
+    
     if (document.body.classList.contains("dark-mode")) {
       toggleThemeButton.textContent = "☀️";
     } else {
@@ -39,14 +39,14 @@ if (toggleThemeButton) {
     }
   });
 
-  // ตั้งค่าเริ่มต้นเป็น Light Mode
-  console.log("Initial Body Classes:", document.body.classList); // ✅ ตรวจสอบสถานะเริ่มต้น
+  
+  console.log("Initial Body Classes:", document.body.classList); 
   document.body.classList.add("light-mode");
 } else {
   console.error("ไม่พบปุ่ม toggleTheme ใน DOM");
 }
 
-// ควบคุวเพลง
+
 const musicToggleButton = document.getElementById("toggleMusic");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const volumeControl = document.getElementById("volumeControl");

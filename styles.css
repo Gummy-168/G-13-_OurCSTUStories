@@ -10,7 +10,7 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between; /* จัดตำแหน่งแบบกระจายให้ทั้งสองฝั่ง */
+  justify-content: space-between; 
   align-items: center;
   padding: 20px;
   background-color: #FFF4E9;
@@ -25,8 +25,8 @@ header .logo {
 
 header .navigation {
   display: flex;
-  align-items: center; /* จัดให้อิลิเมนต์ใน navigation อยู่ในแนวเดียวกัน */
-  gap: 20px; /* เพิ่มช่องว่างระหว่างลิงก์ */
+  align-items: center; 
+  gap: 20px; 
 }
 
 header .navigation a {
@@ -219,9 +219,7 @@ body.dark-mode .image-box {
   background-color: #555;
 }
 
-body.dark-mode .footer {
-  background: #111;
-}
+
 
 body.dark-mode .welcome-section h1 {
   background: #2E2E2E;
@@ -237,22 +235,22 @@ body.dark-mode .logo {
 
 .logo {
   display: flex;
-  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  align-items: center; 
   font-size: 20px;
   font-weight: bold;
 }
 
 .logo-image {
-  width: 30px; /* ขนาดของโลโก้ */
-  height: 30px; /* ขนาดของโลโก้ */
-  margin-right: 10px; /* ช่องว่างระหว่างโลโก้กับข้อความ */
+  width: 30px; 
+  height: 30px; 
+  margin-right: 10px; 
 }
 
 .logo span {
   font-size: 18px;
   font-weight: bold;
   color: #4B2E2E;
-  margin-left: -2px; /* ปรับถ้าต้องการชิดมากขึ้น */
+  margin-left: -2px; 
 }
 
 
