@@ -466,7 +466,6 @@ body.dark-mode .team-section h2 {
         padding: 15px;
         flex-direction: column;
         align-items: center;
-        /* จัดให้อยู่ตรงกลาง */
         gap: 10px;
     }
 
@@ -474,13 +473,12 @@ body.dark-mode .team-section h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* จัดให้อยู่ตรงกลาง */
         gap: 5px;
     }
 
     .navigation {
         display: flex;
-        justify-content: center; /* จัดให้อยู่ตรงกลาง */
+        justify-content: center; 
         flex-wrap: nowrap;
         gap: 20px;
         margin-top: 10px;
