@@ -9,7 +9,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Jua', sans-serif;
-    ;
     font-feature-settings: 'liga' on, 'kern' on;
     text-rendering: optimizeLegibility;
     background: #FFF4E9;
@@ -354,15 +353,7 @@ main {
 }
 
 /* รูปแบบการจัดการศิลปะ */
-.comment-card:nth-child(odd) {
-    transform: translateY(-10px);
-    /* เลื่อนขึ้นเล็กน้อยสำหรับไอเท็มเลขคี่ */
-}
 
-.comment-card:nth-child(even) {
-    transform: translateY(10px);
-    /* เลื่อนลงเล็กน้อยสำหรับไอเท็มเลขคู่ */
-}
 
 .comment-avatar {
     width: 50px;
@@ -412,6 +403,18 @@ body.dark-mode {
     background: #2E2E2E;
     color: #FFF4E9;
 }
+
+body.dark-mode #toggleMusic {
+    padding: 5px;
+    background-color: #FFF; 
+    border-radius: 50px;
+  }
+  
+  body.dark-mode #toggleMusic:hover {
+    padding: 5px;
+    background-color: #fffc41; 
+    border-radius: 50px;
+  }
 
 body.dark-mode .parallax-section {
     background-image: url('resource/Night mode stardew.webp');
