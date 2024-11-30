@@ -84,6 +84,63 @@ header nav a:hover {
     margin-left: auto;
 }
 
+@media (max-width: 600px) {
+
+    .aim-left1 {
+        font-size: 36px;
+        margin-bottom: 4vh;
+    }
+
+    .aim-right {
+        justify-content: center;
+    }
+
+    .aim-right img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .aim {
+        grid-template-columns: 1fr;
+        padding-inline: 20px;
+
+    }
+
+    .aim-left1 {
+        display: none;
+    }
+
+    .aim-left2 {
+        display: contents;
+        font-size: 20px;
+        color: var(--color-font);
+        text-align: center;
+    }
+
+    .aim-right img {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+}
+
 .talk-about-future {
     text-align: center;
 }
@@ -240,7 +297,7 @@ header nav a:hover {
 
 .button img {
     width: 30px;
-    height: 30pxว
+    height: 30px;
 }
 
 .button:hover img {
@@ -331,7 +388,7 @@ header nav a:hover {
 .navigation a {
     text-decoration: none;
     margin-right: 50px;
-    color: #4B2E2E;
+    color: var(--color-footer);
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -341,7 +398,6 @@ header nav a:hover {
 }
 
 /*controls*/
-
 .controls {
     display: flex;
     align-items: center;
@@ -369,13 +425,13 @@ header nav a:hover {
 
 /* Moon mode */
 body.light-mode {
-    background: #FFF4E9;
-    color: #4B2E2E;
+    background: var(--color-background);
+    color: var(--color-footer);
 }
 
 body.dark-mode {
     background: #2E2E2E;
-    color: #FFF4E9;
+    color: var(--color-background);
 }
 
 
@@ -451,59 +507,76 @@ body.dark-mode .team-section h2 {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+/*arrow*/
 
-    .aim-left1 {
-        font-size: 36px;
-        margin-bottom: 4vh;
-    }
-
-    .aim-right {
-        justify-content: center;
-    }
-
-    .aim-right img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    header nav a {
-        font-size: 14px;
-    }
+#arrow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    animation: none;
 }
 
-@media (max-width: 440px) {
-    .aim {
-        grid-template-columns: 1fr;
-        padding-inline: 20px;
 
-    }
+/* แอนิเมชันเมื่อถูกกระตุ้น */
+#arrow.animate {
+    animation: arrowFly 2s ease-in-out forwards;
+}
 
-    .aim-left1 {
-        display: none;
-    }
+body.dark-mode {
+    background: #2E2E2E;
+    color: #FFF;
+}
 
-    .aim-left2 {
-        display: contents;
-        font-size: 20px;
-        color: var(--color-font);
-        text-align: center;
-    }
 
-    .aim-right img {
-        width: 80%;
-    }
+body.dark-mode .footer {
+    background: var(--color-footer);
+    color: var(--color-primary);
+}
 
-    header h1 {
-        font-size: 18px;
-    }
 
-    header nav a {
-        font-size: 12px;
-    }
+body.dark-mode header {
+    background-color: #333;
+    color: #FFF;
+}
+
+body.dark-mode .navigation a {
+    color: #FFF;
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+}
+
+
+body.dark-mode .logo span {
+    color: #FFF;
+}
+
+
+body.dark-mode .aim-left1,
+body.dark-mode .aim-left2 {
+    color: #FFF;
+}
+
+
+body.dark-mode .speech-bubble {
+    background-color: #333;
+    color: #FFF;
+}
+
+
+body.dark-mode #toggleTheme,
+body.dark-mode #toggleMusic {
+    color: #FFF;
+}
+
+body.dark-mode #volumeControl {
+    background-color: #444;
+}
+
+
+body.dark-mode .chat .text p {
+    color: #FFFFFF;
 }
