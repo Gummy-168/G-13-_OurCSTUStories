@@ -108,6 +108,38 @@ header nav a:hover {
     header nav a {
         font-size: 14px;
     }
+    .chat-section {
+        padding: 0 10px;
+    }
+
+    .chat {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        gap: 10px;
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .chat.right {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speech-bubble {
+        max-width: 100%; /* ขยายพื้นที่แสดงข้อความให้เต็มจอ */
+        font-size: 14px;
+        word-wrap: break-word; /* บังคับตัดข้อความในคำที่ยาว */
+        overflow-wrap: break-word; /* เพิ่มตัวเลือกการตัดคำ */
+        word-break: break-word; /* ตัดคำเมื่อข้อความยาวเกินไป */
+    }
 }
 
 @media (max-width: 440px) {
@@ -138,6 +170,22 @@ header nav a:hover {
 
     header nav a {
         font-size: 12px;
+    }
+    .chat-section {
+        gap: 5px;
+    }
+
+    .chat {
+        padding: 8px;
+    }
+
+    .speech-bubble {
+        padding: 15px;
+        font-size: 12px;
+        max-width: 100%; /* ทำให้ข้อความยืดเต็มพื้นที่ */
+        word-wrap: break-word; /* บังคับให้ข้อความยาวตัดบรรทัด */
+        overflow-wrap: break-word; /* ตัวเลือกสำรอง */
+        word-break: break-word; /* ตัดคำถ้าข้อความยาวเกิน */
     }
 }
 
