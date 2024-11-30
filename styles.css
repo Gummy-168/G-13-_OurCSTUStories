@@ -129,7 +129,7 @@ header nav a:hover {
     }
 
     .aim-right img {
-        width: 80%;
+        display: none;
     }
 
     header h1 {
@@ -297,7 +297,7 @@ header nav a:hover {
 
 .button img {
     width: 30px;
-    height: 30pxว
+    height: 30px;
 }
 
 .button:hover img {
@@ -388,7 +388,7 @@ header nav a:hover {
 .navigation a {
     text-decoration: none;
     margin-right: 50px;
-    color: #4B2E2E;
+    color: var(--color-footer);
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -398,7 +398,6 @@ header nav a:hover {
 }
 
 /*controls*/
-
 .controls {
     display: flex;
     align-items: center;
@@ -426,13 +425,13 @@ header nav a:hover {
 
 /* Moon mode */
 body.light-mode {
-    background: #FFF4E9;
-    color: #4B2E2E;
+    background: var(--color-background);
+    color: var(--color-footer);
 }
 
 body.dark-mode {
     background: #2E2E2E;
-    color: #FFF4E9;
+    color: var(--color-background);
 }
 
 
@@ -508,9 +507,7 @@ body.dark-mode .team-section h2 {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 /*arrow*/
-
 #arrow {
     position: absolute;
     top: 50%;
@@ -538,7 +535,6 @@ body.dark-mode .team-section h2 {
 #arrow.animate {
     animation: arrowFly 2s ease-in-out forwards;
 }
-=======
 
 body.dark-mode {
     background: #2E2E2E; 
@@ -596,4 +592,86 @@ body.dark-mode #volumeControl {
 body.dark-mode .chat .text p {
     color: #FFFFFF; 
 }
->>>>>>> 35554d134aa871491f6ebb8965b457bf860b6d63
+
+@media (max-width: 768px) {
+
+    nav.navigation {
+        display: flex;
+        justify-content: center;  
+        gap: 20px;                
+        width: 100%;          
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        position: relative;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;  
+        flex-wrap: nowrap;        
+        gap: 20px;                
+        width: 100%;            
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
