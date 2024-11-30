@@ -175,13 +175,18 @@ header .navigation a:hover {
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #2E2E2E;
+  background-color: #2a2a2a;
   color: #FFF4E9;
+}
+
+body.light-mode {
+  background-color: #FFF4E9;
+  color: #4B2E2E;
 }
 
 
 body.dark-mode #typing-text {
-  background-color: #2E2E2E;
+  background-color: #2a2a2a;
   color: #FFF4E9;
 }
 
@@ -329,4 +334,15 @@ body.dark-mode .logo {
 body.dark-mode #visualizer {
   background: #2e2e2e;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+video {
+  width: 100%;
+  /* ขยายเต็มความกว้าง */
+  max-width: 400px;
+  /* กำหนดขนาดสูงสุด */
+  height: auto;
+  /* ปรับความสูงตามอัตราส่วน */
+  border-radius: 10px;
+
 }

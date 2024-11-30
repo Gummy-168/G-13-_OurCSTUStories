@@ -17,29 +17,33 @@ function isInView(element) {
   );
 }
 
-const toggleThemeButton = document.getElementById("toggleTheme");
-console.log("Toggle Theme Button:", toggleThemeButton);
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleThemeButton = document.getElementById("toggleTheme");
+  const videoElement = document.getElementById("themeVideo");
+  const videoSource = document.getElementById("videoSource");
 
-if (toggleThemeButton) {
+  // ตั้งค่าเริ่มต้นเป็น Light Mode
+  document.body.classList.add("light-mode");
+
+  // เมื่อกดปุ่ม Toggle
   toggleThemeButton.addEventListener("click", () => {
-    console.log("Theme Toggle Clicked!");
-    document.body.classList.toggle("dark-mode");
+    const isDarkMode = document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 
-    console.log("Body Classes After Toggle:", document.body.classList);
+    // เปลี่ยนไอคอนปุ่ม
+    toggleThemeButton.textContent = isDarkMode ? "☀️" : "🌙";
 
-    if (document.body.classList.contains("dark-mode")) {
-      toggleThemeButton.textContent = "☀️";
+    // เปลี่ยนวิดีโอ
+    if (isDarkMode) {
+      videoSource.src = "resource/lv_0_20241201013003.mp4";
     } else {
-      toggleThemeButton.textContent = "🌙";
+      videoSource.src = "resource/lv_0_20241201012232 (1).mp4";
     }
-  });
 
-  console.log("Initial Body Classes:", document.body.classList);
-  document.body.classList.add("light-mode");
-} else {
-  console.error("ไม่พบปุ่ม toggleTheme ใน DOM");
-}
+    // โหลดวิดีโอใหม่
+    videoElement.load();
+  });
+});
 
 const musicToggleButton = document.getElementById("toggleMusic");
 const backgroundMusic = document.getElementById("backgroundMusic");
