@@ -29,19 +29,38 @@
             </audio>
         </div>
     </header>
+    <hr class="fade_in">
 
     <main>
+
         <div class="fade_in aim">
-            <div class="aim-left1">
-                <h1>Our <br>Future</h1>
-            </div>
-            <div class="aim-left2">
-                <h1>Our Future</h1>
-            </div>
-            <div class="aim-right">
-                <img id="target" src="resources/aim.png" alt="Target Icon">
+            <div class="text-animate-container">
+                <span class="text-animate" data-final-x="0" data-final-y="0">O</span>
+                <span class="text-animate" data-final-x="70" data-final-y="0">u</span>
+                <span class="text-animate" data-final-x="130" data-final-y="0">r</span>
+                <span class="text-animate" data-final-x="250" data-final-y="0"> </span>
+                <span class="text-animate" data-final-x="270" data-final-y="0">F</span>
+                <span class="text-animate" data-final-x="330" data-final-y="0">u</span>
+                <span class="text-animate" data-final-x="390" data-final-y="0">t</span>
+                <span class="text-animate" data-final-x="450" data-final-y="0">u</span>
+                <span class="text-animate" data-final-x="510" data-final-y="0">r</span>
+                <span class="text-animate" data-final-x="570" data-final-y="0">e</span>
             </div>
 
+
+            <section id="video-section" class="fade_in">
+                <!-- วิดีโอ Light Mode -->
+                <video id="lightVideo" autoplay loop muted playsinline>
+                    <source src="resources/Aim_video-vmake.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- วิดีโอ Dark Mode -->
+                <video id="darkVideo" autoplay loop muted playsinline style="display: none;">
+                    <source src="resources/Aim_video_Dark-vmake.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
         </div>
 
         <div class="fade_in talk-about-future">

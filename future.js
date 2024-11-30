@@ -43,27 +43,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Moon mod
 const toggleThemeButton = document.getElementById("toggleTheme");
-console.log("Toggle Theme Button:", toggleThemeButton);
+const lightVideo = document.getElementById("lightVideo");
+const darkVideo = document.getElementById("darkVideo");
 
-if (toggleThemeButton) {
+if (toggleThemeButton && lightVideo && darkVideo) {
+  document.body.classList.add("light-mode");
+
   toggleThemeButton.addEventListener("click", () => {
-    console.log("Theme Toggle Clicked!");
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 
-    console.log("Body Classes After Toggle:", document.body.classList);
-
     if (document.body.classList.contains("dark-mode")) {
       toggleThemeButton.textContent = "☀️";
+      lightVideo.style.display = "none";
+      darkVideo.style.display = "block";
     } else {
       toggleThemeButton.textContent = "🌙";
+      lightVideo.style.display = "block";
+      darkVideo.style.display = "none";
     }
   });
-
-  console.log("Initial Body Classes:", document.body.classList);
-  document.body.classList.add("light-mode");
 } else {
-  console.error("ไม่พบปุ่ม toggleTheme ใน DOM");
+  console.error("ไม่พบ toggleThemeButton, lightVideo หรือ darkVideo ใน DOM");
 }
 
 // ควบคุวเพลง
@@ -98,4 +99,14 @@ musicToggleButton.addEventListener("click", () => {
 
 volumeControl.addEventListener("input", (event) => {
   backgroundMusic.volume = event.target.value;
+});
+
+// text animation
+document.addEventListener("DOMContentLoaded", () => {
+  const flyingTexts = document.querySelectorAll(".text-animate");
+
+  flyingTexts.forEach((text, index) => {
+    text.classList.add("text-fly-curve"); // เพิ่มคลาสเพื่อเรียกใช้แอนิเมชัน
+    text.style.animationDelay = `${index * 0.3}s`; // เรียงแอนิเมชันทีละตัว
+  });
 });

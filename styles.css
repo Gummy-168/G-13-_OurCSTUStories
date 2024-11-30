@@ -52,9 +52,9 @@ header nav a:hover {
 .aim {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    padding-inline: 52px;
-    padding-top: 40px;
+    grid-gap: 10px;
+    padding-inline: 10px;
+    padding-top: 10px;
     align-items: center;
     justify-items: center;
 }
@@ -108,6 +108,7 @@ header nav a:hover {
     header nav a {
         font-size: 14px;
     }
+
     .chat-section {
         padding: 0 10px;
     }
@@ -134,11 +135,15 @@ header nav a:hover {
     }
 
     .speech-bubble {
-        max-width: 100%; /* ขยายพื้นที่แสดงข้อความให้เต็มจอ */
+        max-width: 100%;
+        /* ขยายพื้นที่แสดงข้อความให้เต็มจอ */
         font-size: 14px;
-        word-wrap: break-word; /* บังคับตัดข้อความในคำที่ยาว */
-        overflow-wrap: break-word; /* เพิ่มตัวเลือกการตัดคำ */
-        word-break: break-word; /* ตัดคำเมื่อข้อความยาวเกินไป */
+        word-wrap: break-word;
+        /* บังคับตัดข้อความในคำที่ยาว */
+        overflow-wrap: break-word;
+        /* เพิ่มตัวเลือกการตัดคำ */
+        word-break: break-word;
+        /* ตัดคำเมื่อข้อความยาวเกินไป */
     }
 }
 
@@ -171,6 +176,7 @@ header nav a:hover {
     header nav a {
         font-size: 12px;
     }
+
     .chat-section {
         gap: 5px;
     }
@@ -182,10 +188,14 @@ header nav a:hover {
     .speech-bubble {
         padding: 15px;
         font-size: 12px;
-        max-width: 100%; /* ทำให้ข้อความยืดเต็มพื้นที่ */
-        word-wrap: break-word; /* บังคับให้ข้อความยาวตัดบรรทัด */
-        overflow-wrap: break-word; /* ตัวเลือกสำรอง */
-        word-break: break-word; /* ตัดคำถ้าข้อความยาวเกิน */
+        max-width: 100%;
+        /* ทำให้ข้อความยืดเต็มพื้นที่ */
+        word-wrap: break-word;
+        /* บังคับให้ข้อความยาวตัดบรรทัด */
+        overflow-wrap: break-word;
+        /* ตัวเลือกสำรอง */
+        word-break: break-word;
+        /* ตัดคำถ้าข้อความยาวเกิน */
     }
 }
 
@@ -478,12 +488,9 @@ body.light-mode {
 }
 
 body.dark-mode {
-    background: #2E2E2E;
+    background: #232323;
     color: var(--color-background);
 }
-
-
-
 
 body.dark-mode #toggleMusic {
     padding: 5px;
@@ -573,7 +580,17 @@ body.dark-mode .team-section h2 {
 }
 
 body.dark-mode {
-    background: #2E2E2E;
+    background: #2b2c2c;
+    color: #FFF;
+}
+
+body.dark-mode .text-animate {
+    background: #2b2c2c;
+    color: #FFF;
+}
+
+body.dark-mode .text-fly-curve {
+    background: #2b2c2c;
     color: #FFF;
 }
 
@@ -627,4 +644,98 @@ body.dark-mode #volumeControl {
 
 body.dark-mode .chat .text p {
     color: #FFFFFF;
+}
+
+body.dark-mode #backgroundVideo {
+    filter: brightness(50%);
+}
+
+#video-section {
+    position: relative;
+    width: 70%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+#video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*text-animation*/
+.text-animate-container {
+    position: relative;
+    width: 600px;
+    height: 100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.text-animate {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    color: #4B2E2E;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes flyCurve {
+    0% {
+        transform: translate(-200px, -200px) rotate(-360deg);
+        /* เริ่มจากมุมบนซ้าย */
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(50px, -100px) rotate(-180deg);
+        /* โค้งลงมาครึ่งหนึ่ง */
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        /* ตำแหน่งสุดท้าย */
+        opacity: 1;
+    }
+}
+
+@keyframes flyCircle {
+    0% {
+        transform: rotate(0deg) translateX(-300px) rotate(0deg);
+        /* เริ่มบินจากระยะไกล */
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-150px) rotate(-180deg);
+        /* บินผ่านครึ่งวง */
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(0) rotate(-360deg);
+        /* บินเข้าใกล้ */
+        opacity: 1;
+    }
+}
+
+
+.text-fly-curve {
+    display: inline-block;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    color: #4B2E2E;
+    animation: flyCurve 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    /* cubic-bezier ใช้ปรับให้โค้งแบบเนียน */
 }
