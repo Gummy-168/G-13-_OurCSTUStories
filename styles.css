@@ -179,6 +179,12 @@ body.dark-mode {
   color: #FFF4E9;
 }
 
+
+body.dark-mode #typing-text {
+  background-color: #2E2E2E;
+  color: #FFF4E9;
+}
+
 body.dark-mode #toggleMusic {
   padding: 5px;
   background-color: #FFF;
@@ -219,8 +225,6 @@ body.dark-mode .image-box {
   background-color: #555;
 }
 
-
-
 body.dark-mode .welcome-section h1 {
   background: #2E2E2E;
   color: #FFF4E9;
@@ -230,8 +234,6 @@ body.dark-mode .logo {
   background: #2E2E2E;
   color: #FFF4E9;
 }
-
-
 
 .logo {
   display: flex;
@@ -252,7 +254,6 @@ body.dark-mode .logo {
   color: #4B2E2E;
   margin-left: -2px;
 }
-
 
 .controls {
   display: flex;
@@ -293,7 +294,6 @@ body.dark-mode .logo {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #4B2E2E;
-  /* เคอร์เซอร์ */
   animation: blink 0.7s step-end infinite;
   /* เคอร์เซอร์กระพริบ */
   text-align: center;
@@ -313,16 +313,20 @@ body.dark-mode .logo {
   }
 }
 
-/* Visualizer */
+/* Visualizer Light Mode */
 #visualizer {
+  background: #f5deb3;
+  /* สีพื้นหลัง */
   display: block;
   width: 80%;
   height: 200px;
   margin: 20px auto;
-  background: #f5deb3;
-  /* สีพื้นหลังเบจ */
   border-radius: 10px;
-  /* ขอบมน */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* เพิ่มเงา */
+}
+
+/* Visualizer Dark Mode */
+body.dark-mode #visualizer {
+  background: #2e2e2e;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }

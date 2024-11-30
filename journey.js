@@ -142,29 +142,40 @@ audio.addEventListener("play", () => {
 
     analyser.getByteFrequencyData(dataArray);
     dataArray.forEach((value, index) => {
+      // Smooth ค่า
       let smoothedValue = previousValues[index] * 0.8 + value * 0.2;
       previousValues[index] = smoothedValue;
 
+      // ลดความแรงของความถี่ต่ำ
       if (index < 5) {
         smoothedValue = smoothedValue * 0.5;
       }
 
+      // คำนวณความสูงของแท่ง
       const barHeight = Math.log10(1 + smoothedValue) * 50;
 
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, `rgba(165, 42, 42, 1)`);
-      gradient.addColorStop(1, `rgba(210, 105, 30, 0.8)`);
+      // ตรวจสอบโหมด
+      const isDarkMode = document.body.classList.contains("dark-mode");
 
-      // ใช้ roundRect สำหรับขอบมน
+      // ตั้งค่ากราดิเอียนตามโหมด
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      if (isDarkMode) {
+        gradient.addColorStop(0, `rgba(100, 100, 255, 1)`); // น้ำเงินเข้ม
+        gradient.addColorStop(1, `rgba(80, 246, 59, 0.8)`); // น้ำเงินอ่อน
+      } else {
+        gradient.addColorStop(0, `rgba(165, 42, 42, 1)`); // น้ำตาลเข้ม
+        gradient.addColorStop(1, `rgba(210, 105, 30, 0.8)`); // น้ำตาลอ่อน
+      }
+
+      // วาดแท่งพร้อมขอบมน
       ctx.beginPath();
       if (ctx.roundRect) {
-        // ใช้ roundRect ถ้ารองรับ
         ctx.roundRect(
           x, // ตำแหน่ง X
           canvas.height - barHeight, // ความสูง
           barWidth - 2, // ความกว้าง
           barHeight, // ความสูงของแท่ง
-          10 // รัศมีความมน
+          10 // รัศมีขอบมน
         );
       } else {
         ctx.moveTo(x, canvas.height);
