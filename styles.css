@@ -84,62 +84,92 @@ header nav a:hover {
     margin-left: auto;
 }
 
-@media (max-width: 600px) {
+.chatbox {
+    width: 80%;  /* กำหนดความกว้างเริ่มต้น */
+    max-width: 500px;  /* ขนาดสูงสุดที่แชทจะมี */
+    margin: 0 auto; /* จัดให้แชทอยู่ตรงกลาง */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
-    .aim-left1 {
-        font-size: 36px;
-        margin-bottom: 4vh;
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
     }
 
-    .aim-right {
-        justify-content: center;
+    header h1 {
+        font-size: 22px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .talk-about-future h2 {
+        font-size: 20px;
     }
 
     .aim-right img {
         width: 100%;
-        max-width: 100%;
         height: auto;
     }
 
-    header h1 {
-        font-size: 20px;
-    }
-
-    header nav a {
-        font-size: 14px;
-    }
-
-    .chat-section {
-        padding: 0 10px;
-    }
-
-    .chat {
+    .message-box {
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        text-align: left;
         gap: 10px;
-        min-height: auto;
+    }
+
+    .message-buttons {
+        gap: 5px;
+    }
+
+    .button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message-input {
+        width: 100%;
+        font-size: 14px;
         padding: 10px;
     }
 
-    .chat.right {
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: right;
+    .aim-left1 {
+        font-size: 20px;
     }
 
-    .circle {
+    .chat-section {
+        padding: 0 5px;
+    }
+
+    .chat .circle {
         width: 60px;
         height: 60px;
     }
 
-    .speech-bubble {
-        max-width: 100%;
-        font-size: 14px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        word-break: break-word;
+    .chat .speech-bubble {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 16px;
+        text-align: center;
     }
 }
 
