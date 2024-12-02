@@ -41,7 +41,7 @@ header .navigation a:hover {
 
 #toggleTheme {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
   background: transparent;
   border: none;
   transition: transform 0.3s ease;
@@ -67,11 +67,11 @@ header .navigation a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .welcome-section .icons img {
-  height: 150px;
+  height: 50px;
   transition: transform 0.3s ease;
 }
 
@@ -191,9 +191,9 @@ body.dark-mode #typing-text {
 }
 
 body.dark-mode #toggleMusic {
-  padding: 5px;
+  padding: 0.1px;
   background-color: #FFF;
-  border-radius: 50px;
+  border-radius: 0.5px;
 }
 
 body.dark-mode #toggleMusic:hover {
@@ -282,7 +282,7 @@ body.dark-mode .logo {
 }
 
 #volumeControl {
-  width: 100px;
+  width: 50px;
   cursor: pointer;
 }
 
@@ -528,7 +528,151 @@ video {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
+  .journey-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-box {
+    flex: 0
+  }
+
+  #typing-text {
+    font-size: 1.5rem;
+  }
+}
+
+.HOME {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 360px) {
+
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+  }
+
+  .icons {
+    width: 250px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #visualizer{
+    height: 100px;
+    width: 300px;
+  }
+
+  .text-box{
+   
+    
+  }
+
+  header .logo {
+    font-size: 8px;
+    margin-right: 8px;
+    text-align: row;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  header .navigation a {
+    font-size: 0.6rem;
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .welcome-section .icons img {
+    height: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* Journey Section */
+  .journey-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .image-box {
+    flex: 0 0 45%;
+    height: auto;
+  }
+
+  .iconforall {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+  }
+
+  .iconforall img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+  }
+
+  .red-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+  }
+
+  .green-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+  }
+
+  .yellow-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+  }
+
+  .pink-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+  }
+
+  .purple-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+  }
+}
+
+
+
+
+@media (max-width: 360px) {
   .journey-row {
     flex-direction: column;
     gap: 10px;
