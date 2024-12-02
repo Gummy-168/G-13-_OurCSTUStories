@@ -334,11 +334,8 @@ body.dark-mode #visualizer {
 
 video {
   width: 100%;
-  /* ขยายเต็มความกว้าง */
   max-width: 400px;
-  /* กำหนดขนาดสูงสุด */
   height: auto;
-  /* ปรับความสูงตามอัตราส่วน */
   border-radius: 10px;
 }
 
@@ -420,75 +417,75 @@ video {
   /* Header */
   header {
     display: flex;
-    flex-direction: row; /* จัดเรียงในแนวนอน */
-    justify-content: space-between; /* จัดให้โลโก้และเมนูห่างกัน */
+    flex-direction: row; 
+    justify-content: space-between; 
     align-items: center;
-    padding: 15px; /* เพิ่มระยะห่างภายใน */
+    padding: 15px; 
   }
 
   header .logo {
-    font-size: 22px; /* ขนาดใหญ่ขึ้นเล็กน้อย */
-    margin-right: 50px; /* เพิ่มระยะห่างจากเมนู */
+    font-size: 22px; 
+    margin-right: 50px; 
     text-align: left;
   }
 
   header .navigation {
     display: flex;
-    flex-direction: row; /* จัดเรียงในแนวนอน */
-    justify-content: flex-end; /* จัดให้อยู่ขวา */
-    gap: 20px; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    flex-direction: row; 
+    justify-content: flex-end; 
+    gap: 20px; 
   }
 
   header .navigation a {
-    font-size: 1rem; /* ขนาดเหมาะสมกับหน้าจอ */
+    font-size: 1rem; 
   }
 
   /* Welcome Section */
   .welcome-section {
-    padding: 15px; /* เพิ่มระยะห่างภายใน */
+    padding: 15px; 
     text-align: center;
   }
 
   .welcome-section h1 {
-    font-size: 48px; /* ปรับขนาดตัวอักษร */
-    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่าง */
+    font-size: 48px; 
+    margin-bottom: 15px; 
   }
 
   .welcome-section .icons img {
-    height: 130px; /* ปรับขนาดไอคอน */
-    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+    height: 130px; 
+    margin-bottom: 20px; 
   }
 
   /* Journey Section */
   .journey-row {
-    flex-direction: column; /* ยังคงเป็นแนวตั้ง */
-    gap: 25px; /* เพิ่มระยะห่าง */
+    flex-direction: column; 
+    gap: 25px; 
   }
 
   .image-box {
     flex: 0 0 80%;
-    height: 380px; /* ปรับความสูง */
-    margin-bottom: 20px; /* เพิ่มระยะห่างใต้ภาพ */
+    height: 380px; 
+    margin-bottom: 20px; 
   }
 
   .text-box {
     flex: 0 0 90%;
-    font-size: 1rem; /* ขนาดตัวอักษร */
-    padding: 20px; /* เพิ่มระยะห่างภายใน */
+    font-size: 1rem; 
+    padding: 20px; 
   }
 
   /* Footer */
   .footer {
     font-size: 14px;
-    padding: 20px; /* เพิ่มระยะห่างภายใน */
+    padding: 20px; 
     text-align: center;
   }
 
   /* Visualizer */
   #visualizer {
-    width: 90%; /* ขยายความกว้าง */
-    height: 200px; /* ปรับความสูง */
-    margin: 20px auto; /* เพิ่มระยะห่างจากส่วนอื่นๆ */
+    width: 90%; 
+    height: 200px; 
+    margin: 20px auto; 
   }
 }
 
@@ -506,4 +503,37 @@ video {
 .iconforall img {
   width: 100%;
   height: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  canvas#visualizer {
+    width: 100%;
+    height: 150px;
+  }
+
+  .fade_in {
+    font-size: 1rem;
+  }
+
+  
+  #toggleTheme, #toggleMusic {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
 }
