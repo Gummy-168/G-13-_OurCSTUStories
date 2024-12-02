@@ -212,40 +212,44 @@ video {
     body {
         margin: 0; 
     }
+
+    .video-container video {
+        display: none; 
+    }
 }
 
 @media (max-width: 360px) {
     .aim-left1 {
-        font-size: 18px; /* ปรับขนาดตัวอักษร */
+        font-size: 18px; 
     }
 
     .chat .speech-bubble {
-        font-size: 12px; /* ปรับขนาดตัวอักษรใน speech bubble */
-        padding: 8px; /* ปรับ padding ให้เหมาะสม */
-        max-width: 90%;  /* ปรับความกว้างของ speech bubble */
-        word-wrap: break-word;  /* ทำให้ข้อความที่ยาวเกินไปห่อคำ */
+        font-size: 12px; 
+        padding: 8px; 
+        max-width: 90%;  
+        word-wrap: break-word;  
     }
 
     .chat .circle {
-        width: 50px;  /* ปรับขนาดวงกลมที่ใช้แสดงรูป */
+        width: 50px;  
         height: 50px;
     }
 
     .logo span {
-        font-size: 16px; /* ปรับขนาดข้อความใน logo */
+        font-size: 16px; 
     }
 
     .navigation a {
-        font-size: 12px;  /* ปรับขนาดตัวอักษรใน navigation */
+        font-size: 12px;  
     }
 
     .button img {
         width: 25px;
-        height: 25px; /* ปรับขนาดไอคอนปุ่ม */
+        height: 25px; 
     }
 
     .message-input {
-        font-size: 14px; /* ปรับขนาดตัวอักษรใน input box */
+        font-size: 14px; 
         padding: 10px;
     }
 
@@ -259,8 +263,7 @@ video {
     }
 
     .video-container video {
-        width: 100%; 
-        height: auto;
+        display: none; 
     }
 
     .chat-section {
