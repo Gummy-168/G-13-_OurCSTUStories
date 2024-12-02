@@ -286,7 +286,7 @@ body.dark-mode .logo {
 
 .thai {
   font-family: 'Mali', sans-serif;
-  font-size: large;
+  font-size: 1.5rem;
 }
 
 /* Typing Animation */
@@ -316,11 +316,11 @@ body.dark-mode .logo {
 
 /* Visualizer Light Mode */
 #visualizer {
-  background: #f5deb3;
+  background: #fcead8;
   /* สีพื้นหลัง */
   display: block;
   width: 80%;
-  height: 200px;
+  height: 100px;
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
