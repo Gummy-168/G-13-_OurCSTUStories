@@ -124,7 +124,6 @@ header .navigation a:hover {
   font-size: 16px;
   color: #555;
   line-height: 1.5;
-
 }
 
 /* Footer */
@@ -183,7 +182,6 @@ body.light-mode {
   background-color: #FFF4E9;
   color: #4B2E2E;
 }
-
 
 body.dark-mode #typing-text {
   background-color: #2a2a2a;
@@ -286,7 +284,6 @@ body.dark-mode .logo {
   cursor: pointer;
 }
 
-
 .thai {
   font-family: 'Mali', sans-serif;
   font-size: large;
@@ -306,8 +303,7 @@ body.dark-mode .logo {
   display: inline-block;
 }
 
-@keyframes blink {
-
+@keyframes blink {  
   from,
   to {
     border-color: transparent;
@@ -344,5 +340,156 @@ video {
   height: auto;
   /* ปรับความสูงตามอัตราส่วน */
   border-radius: 10px;
-
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .journey-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  header .navigation a {
+    font-size: 1rem;
+
+  }
+
+  header .logo{
+    font-size: 18px;
+
+  }
+
+  
+
+  .image-box {
+    flex: 0 0 80%;
+    height: 300px;
+  }
+
+  .text-box {
+    flex: 0 0 80%;
+    padding: 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 36px;
+  }
+
+  header .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-box {
+    flex: 0
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-box {
+    flex: 0
+  }
+
+  #typing-text{
+    font-size: 1.5rem;
+  }
+}
+
+.HOME{
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: row; /* จัดเรียงในแนวนอน */
+    justify-content: space-between; /* จัดให้โลโก้และเมนูห่างกัน */
+    align-items: center;
+    padding: 15px; /* เพิ่มระยะห่างภายใน */
+  }
+
+  header .logo {
+    font-size: 22px; /* ขนาดใหญ่ขึ้นเล็กน้อย */
+    margin-right: 50px; /* เพิ่มระยะห่างจากเมนู */
+    text-align: left;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row; /* จัดเรียงในแนวนอน */
+    justify-content: flex-end; /* จัดให้อยู่ขวา */
+    gap: 20px; /* เพิ่มระยะห่างระหว่างลิงก์ */
+  }
+
+  header .navigation a {
+    font-size: 1rem; /* ขนาดเหมาะสมกับหน้าจอ */
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 15px; /* เพิ่มระยะห่างภายใน */
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    font-size: 48px; /* ปรับขนาดตัวอักษร */
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่าง */
+  }
+
+  .welcome-section .icons img {
+    height: 130px; /* ปรับขนาดไอคอน */
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  }
+
+  /* Journey Section */
+  .journey-row {
+    flex-direction: column; /* ยังคงเป็นแนวตั้ง */
+    gap: 25px; /* เพิ่มระยะห่าง */
+  }
+
+  .image-box {
+    flex: 0 0 80%;
+    height: 380px; /* ปรับความสูง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างใต้ภาพ */
+  }
+
+  .text-box {
+    flex: 0 0 90%;
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    padding: 20px; /* เพิ่มระยะห่างภายใน */
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 14px;
+    padding: 20px; /* เพิ่มระยะห่างภายใน */
+    text-align: center;
+  }
+
+  /* Visualizer */
+  #visualizer {
+    width: 90%; /* ขยายความกว้าง */
+    height: 200px; /* ปรับความสูง */
+    margin: 20px auto; /* เพิ่มระยะห่างจากส่วนอื่นๆ */
+  }
+}
+
+
