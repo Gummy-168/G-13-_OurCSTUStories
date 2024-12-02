@@ -85,9 +85,9 @@ header nav a:hover {
 }
 
 .chatbox {
-    width: 80%;  
-    max-width: 500px;  
-    margin: 0 auto; 
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -96,200 +96,16 @@ header nav a:hover {
 
 
 video {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-}
-
-@media (max-width: 768px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    header {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    .navigation a {
-        font-size: 14px;
-    }
-
-    .chat .speech-bubble {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .talk-about-future h2 {
-        font-size: 20px;
-    }
-
-    .aim-right img {
-        width: 100%;
-        height: auto;
-    }
-
-    .message-box {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .message-buttons {
-        gap: 5px;
-    }
-
-    .button img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .message-input {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .aim-left1 {
-        font-size: 20px;
-    }
-
-    .chat-section {
-        padding: 0 5px;
-    }
-
-    .chat .circle {
-        width: 60px;
-        height: 60px;
-    }
-
-    .chat .speech-bubble {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    nav.navigation {
-        display: flex;
-        justify-content: center;  
-        gap: 20px;                
-        width: 100%;          
-    }
-
-    .navigation a {
-        text-align: center;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        text-align: center;
-    }
-
-    #toggleTheme {
-        position: absolute;
-        top: 15px;
-        right: 60px;
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    .video-container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    body {
-        margin: 0; 
-    }
-}
-
-@media (max-width: 360px) {
-    .aim-left1 {
-        font-size: 18px; /* ปรับขนาดตัวอักษร */
-    }
-
-    .chat .speech-bubble {
-        font-size: 12px; /* ปรับขนาดตัวอักษรใน speech bubble */
-        padding: 8px; /* ปรับ padding ให้เหมาะสม */
-        max-width: 90%;  /* ปรับความกว้างของ speech bubble */
-        word-wrap: break-word;  /* ทำให้ข้อความที่ยาวเกินไปห่อคำ */
-    }
-
-    .chat .circle {
-        width: 50px;  /* ปรับขนาดวงกลมที่ใช้แสดงรูป */
-        height: 50px;
-    }
-
-    .logo span {
-        font-size: 16px; /* ปรับขนาดข้อความใน logo */
-    }
-
-    .navigation a {
-        font-size: 12px;  /* ปรับขนาดตัวอักษรใน navigation */
-    }
-
-    .button img {
-        width: 25px;
-        height: 25px; /* ปรับขนาดไอคอนปุ่ม */
-    }
-
-    .message-input {
-        font-size: 14px; /* ปรับขนาดตัวอักษรใน input box */
-        padding: 10px;
-    }
-
-    .message-buttons {
-        gap: 5px;
-    }
-
-    .controls {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .video-container video {
-        width: 100%; 
-        height: auto;
-    }
-
-    .chat-section {
-        padding: 0 5px;
-    }
-
-    .text-animate-container {
-        width: 100%; 
-        max-width: 100%; 
-        padding: 0 10px; 
-        box-sizing: border-box; 
-        overflow: hidden; 
-        white-space: nowrap; 
-        text-overflow: ellipsis; 
-    }
-
-    .text-animate-container span {
-        font-size: 18px; 
-        line-height: 1.3; 
-        display: inline-block; 
-    }
-        
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .video-container {
     position: relative;
-    width: 100%; 
-    padding-top: 56.25%; 
-    overflow: hidden; 
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
 }
 
 .video-container video {
@@ -298,11 +114,11 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 body {
-    margin: 0; 
+    margin: 0;
 }
 
 .talk-about-future {
@@ -758,20 +574,19 @@ body.dark-mode #backgroundVideo {
 
 #video-section {
     position: relative;
-    width: 70%;
-    height: 70vh;
-    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
 }
 
 #video-section video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    z-index: -1;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
 }
 
 /*text-animation*/
@@ -843,4 +658,223 @@ body.dark-mode #backgroundVideo {
     font-family: 'Jua', sans-serif;
     color: #4B2E2E;
     animation: flyCurve 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .aim {
+        height: 50%;
+    }
+
+    #video-section {
+        width: 100%;
+        height: auto;
+    }
+
+    #video-section video {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .text-animate-container {
+        width: 300px;
+
+    }
+
+    .text-animate-container .text-fly-curve {
+        font-size: 3rem;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .talk-about-future h2 {
+        font-size: 20px;
+    }
+
+    .aim-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .message-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .message-buttons {
+        gap: 5px;
+    }
+
+    .button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .aim-left1 {
+        font-size: 20px;
+    }
+
+    .chat-section {
+        padding: 0 5px;
+    }
+
+    .chat .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    nav.navigation {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .video-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .aim-left1 {
+        font-size: 18px;
+        /* ปรับขนาดตัวอักษร */
+    }
+
+    .chat .speech-bubble {
+        font-size: 12px;
+        /* ปรับขนาดตัวอักษรใน speech bubble */
+        padding: 8px;
+        /* ปรับ padding ให้เหมาะสม */
+        max-width: 90%;
+        /* ปรับความกว้างของ speech bubble */
+        word-wrap: break-word;
+        /* ทำให้ข้อความที่ยาวเกินไปห่อคำ */
+    }
+
+    .chat .circle {
+        width: 50px;
+        /* ปรับขนาดวงกลมที่ใช้แสดงรูป */
+        height: 50px;
+    }
+
+    .logo span {
+        font-size: 16px;
+        /* ปรับขนาดข้อความใน logo */
+    }
+
+    .navigation a {
+        font-size: 12px;
+        /* ปรับขนาดตัวอักษรใน navigation */
+    }
+
+    .button img {
+        width: 25px;
+        height: 25px;
+        /* ปรับขนาดไอคอนปุ่ม */
+    }
+
+    .message-input {
+        font-size: 14px;
+        /* ปรับขนาดตัวอักษรใน input box */
+        padding: 10px;
+    }
+
+    .message-buttons {
+        gap: 5px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+    }
+
+    .chat-section {
+        padding: 0 5px;
+    }
+
+    .text-animate-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .text-animate-container span {
+        font-size: 18px;
+        line-height: 1.3;
+        display: inline-block;
+    }
+
 }
