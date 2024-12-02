@@ -85,9 +85,12 @@ header nav a:hover {
 }
 
 .chatbox {
-    width: 80%;  /* กำหนดความกว้างเริ่มต้น */
-    max-width: 500px;  /* ขนาดสูงสุดที่แชทจะมี */
-    margin: 0 auto; /* จัดให้แชทอยู่ตรงกลาง */
+    width: 80%;
+    /* กำหนดความกว้างเริ่มต้น */
+    max-width: 500px;
+    /* ขนาดสูงสุดที่แชทจะมี */
+    margin: 0 auto;
+    /* จัดให้แชทอยู่ตรงกลาง */
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -220,6 +223,7 @@ header nav a:hover {
         overflow-wrap: break-word;
         word-break: break-word;
     }
+
     .aim-left1 {
         font-size: 20px;
     }
@@ -620,7 +624,8 @@ body.dark-mode .team-section h2 {
 }
 
 body.dark-mode {
-    background: #2b2c2c;
+    background:
+        #2a2a2a;
     color: #FFF;
 }
 
@@ -711,9 +716,9 @@ body.dark-mode #backgroundVideo {
 /*text-animation*/
 .text-animate-container {
     position: relative;
-    width: 600px;
-    height: 100px;
-    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -721,7 +726,7 @@ body.dark-mode #backgroundVideo {
 }
 
 .text-animate {
-    font-size: 100px;
+    font-size: 5rem;
     font-weight: bold;
     font-family: 'Jua', sans-serif;
     color: #4B2E2E;
@@ -772,7 +777,7 @@ body.dark-mode #backgroundVideo {
 
 .text-fly-curve {
     display: inline-block;
-    font-size: 80px;
+    font-size: 120px;
     font-weight: bold;
     font-family: 'Jua', sans-serif;
     color: #4B2E2E;
