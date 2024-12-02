@@ -85,12 +85,9 @@ header nav a:hover {
 }
 
 .chatbox {
-    width: 80%;
-    /* กำหนดความกว้างเริ่มต้น */
-    max-width: 500px;
-    /* ขนาดสูงสุดที่แชทจะมี */
-    margin: 0 auto;
-    /* จัดให้แชทอยู่ตรงกลาง */
+    width: 80%;  /* กำหนดความกว้างเริ่มต้น */
+    max-width: 500px;  /* ขนาดสูงสุดที่แชทจะมี */
+    margin: 0 auto; /* จัดให้แชทอยู่ตรงกลาง */
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -101,6 +98,14 @@ header nav a:hover {
 
     body {
         font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
     header h1 {
@@ -164,15 +169,33 @@ header nav a:hover {
         padding: 10px;
     }
 
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    nav.navigation {
+        display: flex;
+        justify-content: center;  
+        gap: 20px;                
+        width: 100%;          
     }
 
     .navigation a {
-        font-size: 16px;
         text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -196,6 +219,17 @@ header nav a:hover {
 
     .aim-right img {
         width: 80%;
+    }
+
+    header {
+        position: relative;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
     }
 
     header h1 {
@@ -240,6 +274,36 @@ header nav a:hover {
     .chat .speech-bubble {
         font-size: 12px;
         padding: 10px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;  
+        flex-wrap: nowrap;        
+        gap: 20px;                
+        width: 100%;            
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -624,8 +688,7 @@ body.dark-mode .team-section h2 {
 }
 
 body.dark-mode {
-    background:
-        #2a2a2a;
+    background: #2b2c2c;
     color: #FFF;
 }
 
@@ -716,9 +779,9 @@ body.dark-mode #backgroundVideo {
 /*text-animation*/
 .text-animate-container {
     position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 10px auto;
+    width: 600px;
+    height: 100px;
+    margin: 50px auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -726,7 +789,7 @@ body.dark-mode #backgroundVideo {
 }
 
 .text-animate {
-    font-size: 5rem;
+    font-size: 100px;
     font-weight: bold;
     font-family: 'Jua', sans-serif;
     color: #4B2E2E;
@@ -777,7 +840,7 @@ body.dark-mode #backgroundVideo {
 
 .text-fly-curve {
     display: inline-block;
-    font-size: 120px;
+    font-size: 80px;
     font-weight: bold;
     font-family: 'Jua', sans-serif;
     color: #4B2E2E;
