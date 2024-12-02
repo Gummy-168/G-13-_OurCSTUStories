@@ -342,80 +342,85 @@ video {
   border-radius: 10px;
 }
 
+.iconforall {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+/* สไตล์พื้นฐานสำหรับทุกไอคอน */
+.iconforall img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: auto;
+}
+
+.blue-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.8);
+}
+
+.red-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+.green-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+}
+
+.yellow-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+}
+
+.pink-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+}
+
+.purple-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+}
+
+.journey-section {
+  gap: 15px;
+}
+
+.text-box .thai {
+  flex: 0 0 90%;
+  font-size: 0.8rem;
+  padding: 2px;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Visualizer */
+#visualizer {
+  width: 90%;
+  height: 200px;
+  margin: 20px auto;
+}
+
+
 /* Responsive Design */
-@media (max-width: 768px) {
-  .journey-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  header .navigation a {
-    font-size: 1rem;
-
-  }
-
-  header .logo {
-    font-size: 18px;
-
-  }
-
-
-
-  .image-box {
-    flex: 0 0 80%;
-    height: 300px;
-  }
-
-  .text-box {
-    flex: 0 0 80%;
-    padding: 15px;
-  }
-
-  .welcome-section h1 {
-    font-size: 36px;
-  }
-
-  header .navigation {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .journey-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .image-box {
-    flex: 0
-  }
-}
-
-@media (max-width: 480px) {
-  .journey-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .image-box {
-    flex: 0
-  }
-
-  #typing-text {
-    font-size: 1.5rem;
-  }
-}
-
-.HOME {
-  font-size: 1rem;
-}
-
 @media (max-width: 768px) {
 
   /* Header */
@@ -456,127 +461,88 @@ video {
   }
 
   .welcome-section .icons img {
-    height: 130px;
+    height: 100px;
     margin-bottom: 20px;
   }
 
   /* Journey Section */
   .journey-row {
-    flex-direction: column;
-    gap: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   .image-box {
-    flex: 0 0 80%;
-    height: 380px;
-    margin-bottom: 20px;
+    flex: 0 0 45%;
+    height: auto;
   }
 
-  .text-box {
-    flex: 0 0 90%;
-    font-size: 1rem;
-    padding: 20px;
+  .iconforall {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
   }
 
-  /* Footer */
-  .footer {
-    font-size: 14px;
-    padding: 20px;
-    text-align: center;
+  .iconforall img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
   }
 
-  /* Visualizer */
-  #visualizer {
-    width: 90%;
-    height: 200px;
-    margin: 20px auto;
+  .red-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+  }
+
+  .green-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+  }
+
+  .yellow-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+  }
+
+  .pink-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+  }
+
+  .purple-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    box-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
   }
 }
 
 
 
 
-.iconforall {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 70px;
-  height: 70px;
-}
-
-/* สไตล์พื้นฐานสำหรับทุกไอคอน */
-.iconforall img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blue-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(0, 123, 255, 0.8);
-}
-
-.red-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
-}
-
-.green-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
-}
-
-.yellow-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
-}
-
-.pink-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
-}
-
-.purple-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-  box-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
-}
-
-
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  header {
-    display: flex;
+@media (max-width: 480px) {
+  .journey-row {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
-  .content {
-    padding: 10px;
+  .image-box {
+    flex: 0
   }
 
-  canvas#visualizer {
-    width: 100%;
-    height: 150px;
+  #typing-text {
+    font-size: 1.5rem;
   }
+}
 
-  .fade_in {
-    font-size: 1rem;
-  }
-
-
-  #toggleTheme,
-  #toggleMusic {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
+.HOME {
+  font-size: 1rem;
 }
