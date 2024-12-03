@@ -549,8 +549,8 @@ video {
 }
 
 .HOME {
-  font-size: 1rem;
-}
+  font-size: 0.5rem;
+  }
 
 /* Responsive Design */
 @media (max-width: 360px) {
@@ -573,7 +573,7 @@ video {
 
   #visualizer {
     height: 100px;
-    width: 300px;
+    width: 250px;
   }
 
   header .logo {
@@ -585,14 +585,19 @@ video {
   header .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    gap: 5px;
+    justify-content: flex-start;  /* จัดเรียงตามแนวนอนที่จุดเริ่มต้น */
+    width: auto;  /* ขนาดความกว้างอัตโนมัติ */
+    margin: 0;  /* ไม่ให้มีระยะห่างจากขอบ */
   }
-
+  
   header .navigation a {
     font-size: 0.6rem;
+    padding: 2px 4px;  /* ลด padding ให้น้อยที่สุด */
+    margin-right: 2px;  /* เพิ่ม margin ขวาเล็กน้อย */
+    text-align: center;
   }
-
+  
+  
   /* Welcome Section */
   .welcome-section {
     padding: 5px;
@@ -701,10 +706,6 @@ video {
   }
 }
 
-.HOME {
-  font-size: 1rem;
-}
-
 @media (max-width: 360px) {
 
   /* ปรับ footer ให้แสดงที่ด้านล่าง */
@@ -758,10 +759,11 @@ video {
   }
 
   header .logo {
-    font-size: 6px;
+    font-size: 8px;
     margin-right: 5px;
     text-align: left;
     white-space: nowrap;
+    padding: auto;
   }
 
   header .navigation {
@@ -777,4 +779,50 @@ video {
     white-space: nowrap;
   }
 
+}
+#toggleMusic,
+#toggleTheme,
+#volumeControl,
+#typing-text {
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 4px;  /* ลดระยะห่างระหว่างแต่ละองค์ประกอบ */
+}
+
+#toggleMusic {
+  color: #4B2E2E;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#toggleTheme {
+  transition: transform 0.3s ease;
+}
+
+#volumeControl {
+  width: 20px;
+}
+
+#typing-text {
+  font-size: 0.5rem;
+  color: #4B2E2E;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #4B2E2E;
+  animation: blink 0.7s step-end infinite;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+#typing-text {
+  font-size: 1rem; /* ปรับขนาดฟอนต์ให้ใหญ่ขึ้น */
+  color: #4B2E2E;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #4B2E2E;
+  animation: blink 0.7s step-end infinite;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
 }
