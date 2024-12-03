@@ -704,3 +704,77 @@ video {
 .HOME {
   font-size: 1rem;
 }
+
+@media (max-width: 360px) {
+
+  /* ปรับ footer ให้แสดงที่ด้านล่าง */
+  .footer {
+    font-size: 10px;
+    padding: 5px;
+    position: relative; /* ให้ footer อยู่ในตำแหน่งที่สามารถมองเห็นได้ */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบนของ footer */
+  }
+
+  /* เพิ่มการจัดการส่วนอื่น ๆ เช่น padding ของเนื้อหาบน */
+  body {
+    margin-bottom: 30px; /* เพิ่มพื้นที่ด้านล่างเพื่อให้ footer อยู่ที่ด้านล่าง */
+  }
+
+  /* เพิ่มปรับขนาดและตำแหน่งของเนื้อหาอื่น ๆ */
+  .journey-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-box {
+    order: -1;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .text-box {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .text-box .thai {
+    font-size: 0.8rem;
+  }
+
+  /* ปรับ header เพื่อให้ใช้พื้นที่น้อยลง */
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    margin-left: 5px;
+    overflow: hidden;
+  }
+
+  header .logo {
+    font-size: 6px;
+    margin-right: 5px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  header .navigation a {
+    font-size: 0.5rem;
+    white-space: nowrap;
+  }
+
+}
