@@ -417,7 +417,7 @@ body.dark-mode #toggleMusic:hover {
 }
 
 body.dark-mode .parallax-section {
-    background-image: url('resource/Night mode stardew.webp');
+    background-image: url('resource_home/Night mode stardew.webp');
     color: white;
 }
 
@@ -455,7 +455,7 @@ body.dark-mode .team-section h2 {
 .parallax-section {
     position: relative;
     height: 100vh;
-    background-image: url('resource/Stardew Bg.png');
+    background-image: url('resource_home/Stardew Bg.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -506,7 +506,7 @@ body.dark-mode .team-section h2 {
 
 
 #section1 {
-    background-image: url('resource/Stardew Bg.png');
+    background-image: url('resource_home/Stardew Bg.png');
 }
 
 #section2 {
@@ -598,7 +598,7 @@ body.dark-mode .team-section h2 {
         width: 200px;
     }
 
-    .parallax-section{
+    .parallax-section {
         height: 60vh;
     }
 }
@@ -650,16 +650,16 @@ body.dark-mode .team-section h2 {
     }
 
     .welcome-section {
-        padding: 30px 10px; 
+        padding: 30px 10px;
     }
 
     .welcome-section h1 {
-        font-size: 30px; 
+        font-size: 30px;
     }
 
     .welcome-section .icons img {
         height: 100px;
-        margin: 0 3px; 
+        margin: 0 3px;
     }
 
     .welcome-section .icons {
@@ -668,7 +668,7 @@ body.dark-mode .team-section h2 {
         justify-content: center;
     }
 
-    .parallax-section{
+    .parallax-section {
         height: 40vh;
     }
 }
@@ -723,7 +723,7 @@ body.dark-mode .team-section h2 {
         font-size: 12px;
     }
 
-    .parallax-section{
+    .parallax-section {
         height: 20vh;
     }
 }
