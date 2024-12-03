@@ -147,32 +147,42 @@ const musicToggleButton = document.getElementById("toggleMusic");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const volumeControl = document.getElementById("volumeControl");
 
-let isMusicPlaying = true; 
+let isMusicPlaying = true;
 
 window.addEventListener("load", () => {
-  backgroundMusic.volume = 0.5; 
-  backgroundMusic.play().catch((error) => {
-    console.warn("Autoplay failed. User interaction required.", error);
-    musicToggleButton.textContent = "🔇"; 
-    isMusicPlaying = false;
-  });
-  musicToggleButton.textContent = "🎵"; 
+  backgroundMusic.volume = 0.5;
+
+  backgroundMusic
+    .play()
+    .then(() => {
+      console.log("Music autoplay succeeded.");
+      musicToggleButton.textContent = "🎵";
+      isMusicPlaying = true;
+    })
+    .catch((error) => {
+      console.warn("Autoplay failed. User interaction required.", error);
+      musicToggleButton.textContent = "🔇";
+    });
 });
 
+// เมื่อผู้ใช้กดปุ่มเปิด/ปิดเพลง
 musicToggleButton.addEventListener("click", () => {
   if (isMusicPlaying) {
     backgroundMusic.pause();
-    musicToggleButton.textContent = "🔇"; 
+    musicToggleButton.textContent = "🔇";
   } else {
-    backgroundMusic.play().catch((error) => {
-      console.warn("Playback error:", error);
-    });
-    musicToggleButton.textContent = "🎵"; 
+    backgroundMusic
+      .play()
+      .then(() => {
+        musicToggleButton.textContent = "🎵";
+      })
+      .catch((error) => {
+        console.warn("Playback error:", error);
+      });
   }
   isMusicPlaying = !isMusicPlaying;
 });
 
-
 volumeControl.addEventListener("input", (event) => {
-  backgroundMusic.volume = event.target.value; 
+  backgroundMusic.volume = event.target.value;
 });
