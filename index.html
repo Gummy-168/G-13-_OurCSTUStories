@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our CSTU Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Mali:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_Home.css">
+</head>
+
+<body>
+
+    <header class="fade_in">
+        <div class="logo">
+            <img src="resource_home/logo.png" alt="Logo">
+            <span>Our CSTU Story</span>
+        </div>
+        <nav class="navigation">
+            <a class="top" href="##">HOME</a>
+            <a class="top" href="journey.html">JOURNEY</a>
+            <a class="top" href="future.html">FUTURE</a>
+        </nav>
+        <div class="controls">
+            <button id="toggleTheme">🌙</button>
+            <button id="toggleMusic">🎵</button>
+            <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5">
+            <audio id="backgroundMusic" loop>
+                <source src="resource_home/Stardew Valley OST Fall Ghost Synth.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </header>
+
+    <main>
+        <section class="parallax-section fade_in welcome-section" id="home">
+            <div class="parallax-content">
+                <h1>Welcome to Our Website</h1>
+                <div class="icons">
+                    <img src="resource_home/icon.png" alt="Icon">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="fade_in team-section" id="journey">
+            <h2>OUR TEAM</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="resource_home/Namtan.jpg">
+                    <div class="bottom-bar red-bar">
+                        <div class="thai">
+                            <p>ชัญญานุช สายหงษ์</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="resource_home/Focus.jpg">
+                    <div class="bottom-bar blue-bar">
+                        <div class="thai">
+                            <p>นวพรรษ ทำไธสง</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="resource_home/Yeewha.jpg">
+                    <div class="bottom-bar green-bar">
+                        <div class="thai">
+                            <p>ภัทรินทร์ แซ่ว่อง</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="resource_home/Puji.jpg">
+                    <div class="bottom-bar red-bar">
+                        <div class="thai">
+                            <p>ภูจิร ยังเหลือ</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="resource_home/Ti.jpg">
+                    <div class="bottom-bar blue-bar">
+                        <div class="thai">
+                            <p>รัฐภูมิ แสงคำมา</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="resource_home/Warm.jpg">
+                    <div class="bottom-bar green-bar">
+                        <div class="thai">
+                            <p>กนกพจน์ กาญจนประทุม</p>
+                        </div>
+                        <p>Design, Create-Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="fade_in guest-book-section" id="guest-book">
+            <h2>GUEST BOOK</h2>
+            <form id="guestBookForm" class="guest-book">
+                <div class="form-group">
+                    <div class="thai">
+                        <label for="name">ชื่อ:</label>
+                    </div>
+                    <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+                </div>
+                <div class="form-group">
+                    <div class="thai">
+                        <label for="comment">ข้อเสนอแนะ:</label>
+                    </div>
+                    <textarea id="comment" rows="4" placeholder="กรอกข้อเสนอแนะของคุณ" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="thai">
+                        <label for="rating">ให้คะแนนเว็บไซต์ของเรา:</label>
+                    </div>
+                    <select id="rating" required>
+                        <option value="">-- กรุณาเลือก --</option>
+                        <option value="1">1 (ควรปรับปรุง)</option>
+                        <option value="2">2 (พอใช้)</option>
+                        <option value="3">3 (ปานกลาง)</option>
+                        <option value="4">4 (ดี)</option>
+                        <option value="5">5 (ดีมาก)</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">ส่งความคิดเห็น</button>
+            </form>
+        </section>
+
+        <section class="fade_in guest-comments-section">
+            <div class="thai">
+                <h2>ความคิดเห็นจากผู้เยี่ยมชม</h2>
+            </div>
+            <div id="commentsGrid" class="comments-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 @CSTU. All rights reserved.</p>
+    </footer>
+
+    <script src="script_Home.js"></script>
+</body>
+
+</html>
