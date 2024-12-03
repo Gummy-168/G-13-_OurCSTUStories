@@ -667,16 +667,31 @@ body.dark-mode #backgroundVideo {
     }
 
     header {
-        padding: 15px;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
     }
 
-    header h1 {
+    header .logo {
         font-size: 22px;
+        margin-right: 20px;
+        text-align: left;
     }
+
+    header .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    header .navigation a {
+        font-size: 1rem;
+        width: 10px;
+    }
+
 
     .aim {
         height: 50%;
@@ -759,43 +774,12 @@ body.dark-mode #backgroundVideo {
         padding: 10px;
     }
 
-    nav.navigation {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .navigation a {
-        text-align: center;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        text-align: center;
-    }
-
-    #toggleTheme {
-        position: absolute;
-        top: 15px;
-        right: 60px;
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
 
     .video-container {
         padding-left: 0;
         padding-right: 0;
     }
 
-    body {
-        margin: 0;
-    }
 }
 
 @media (max-width: 360px) {

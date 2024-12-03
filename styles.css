@@ -36,7 +36,7 @@ header .navigation a {
 }
 
 header .navigation a:hover {
-  color: #FFAA33;
+  color: #E74C3C;
 }
 
 #toggleTheme {
@@ -446,6 +446,7 @@ video {
 
   header .navigation a {
     font-size: 1rem;
+    width: 80px;
   }
 
   /* Welcome Section */
@@ -453,6 +454,11 @@ video {
     padding: 15px;
     text-align: center;
   }
+
+  .text-box .thai {
+    font-size: 1.2rem;
+  }
+
 
   .welcome-section h1 {
     font-size: 48px;
@@ -626,6 +632,10 @@ video {
     margin: 0 auto;
     box-sizing: border-box;
 
+  }
+
+  .text-box .thai {
+    font-size: 1rem;
   }
 
   .iconforall {

@@ -59,26 +59,24 @@ header {
     object-fit: contain;
 }
 
-.navigation {
-    margin-left: auto;
+header .navigation {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.navigation a {
+header .navigation a {
     text-decoration: none;
-    margin-right: 50px;
     color: #4B2E2E;
     font-weight: bold;
-    transition: color 0.3s ease;
+}
+
+header .navigation a:hover {
+    color: #E74C3C;
 }
 
 main {
     margin: 0 50px 50px;
-}
-
-.navigation a:hover {
-    color: #E74C3C;
 }
 
 .fade_in {
@@ -553,41 +551,30 @@ body.dark-mode .team-section h2 {
         max-width: 100%;
     }
 
-    nav.navigation {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .navigation a {
-        text-align: center;
-    }
-
     header {
-        padding: 15px;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px;
-        text-align: center;
+        padding: 15px;
     }
 
-    #toggleTheme {
-        position: absolute;
-        top: 15px;
-        right: 60px;
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
+    header .logo {
+        font-size: 22px;
+        margin-right: 50px;
+        text-align: left;
+    }
+
+    header .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    header .navigation a {
+        font-size: 1rem;
+        width: 60px;
     }
 
     .welcome-section h1 {
@@ -608,46 +595,46 @@ body.dark-mode .team-section h2 {
         grid-template-columns: 1fr;
     }
 
+    .icons {
+        width: 250px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     header {
-        position: relative;
-        padding: 15px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 22px;
+        margin-right: 30px;
+        text-align: left;
+    }
+
+    header .logo span {
+        font-size: 10px;
+        margin-right: 50px;
+        text-align: left;
+    }
+
+    header .navigation .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         gap: 10px;
-        text-align: center;
+        width: 10px;
     }
 
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        text-align: center;
+    header .navigation .top a {
+        font-size: 5px;
+
     }
 
-    .navigation {
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .navigation a {
-        text-align: center;
-    }
-
-    #toggleTheme {
-        position: absolute;
-        top: 15px;
-        right: 60px;
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
 
     .welcome-section {
         padding: 30px 10px;
