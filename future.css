@@ -359,21 +359,24 @@ body {
     font-size: 18px;
 }
 
-.navigation {
-    margin-left: auto;
+header .navigation {
     display: flex;
+    justify-content: flex-end;
+    /* จัดให้ลิงก์ไปทางขวา */
+    align-items: center;
     gap: 20px;
+    /* ระยะห่างระหว่างลิงก์ */
+    margin-left: auto;
+    /* ดันไปทางขวาสุด */
 }
 
-.navigation a {
+header .navigation a {
     text-decoration: none;
-    margin-right: 50px;
-    color: var(--color-footer);
+    color: #4B2E2E;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-.navigation a:hover {
+header .navigation a:hover {
     color: #E74C3C;
 }
 
