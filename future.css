@@ -1,0 +1,953 @@
+:root {
+    --color-primary: #FEFEFC;
+    --color-secondary: #FF5454;
+    --color-background: #FFF4E9;
+    --color-font: #562C28;
+    --color-footer: #4B2E2E;
+    --color-blue: #546FC9;
+    --color-green: #B4E77F;
+    --color-yellow: #F1E561;
+    --color-pink: #FF5487;
+    --color-purple: #9A54C9;
+}
+
+main {
+    margin: 0 50px 50px;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-background);
+    color: var(--color-font);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-font);
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--color-font);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-secondary);
+}
+
+.aim {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-inline: 10px;
+    padding-top: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.aim-left1 {
+    font-size: 48px;
+    color: var(--color-font);
+    margin-bottom: 5vh;
+}
+
+.aim-left2 {
+    display: none;
+}
+
+.aim-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.aim-right img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+.chatbox {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
+}
+
+.talk-about-future {
+    text-align: center;
+}
+
+.talk-about-future h2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    color: var(--color-primary);
+    background-color: var(--color-footer);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 16px 24px;
+    min-height: 140px;
+    box-sizing: border-box;
+    height: 140px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.chat.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chat.right {
+    flex-direction: row-reverse;
+}
+
+.chat.right .text {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.chat.left {
+    flex-direction: row;
+}
+
+.chat.right .text,
+.chat.left .text {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.chat .circle1 {
+    background-image: url('resources/yeewha.jpg');
+}
+
+.chat .circle2 {
+    background-image: url('resources/Namtan.jpg');
+}
+
+.chat .circle3 {
+    background-image: url('resources/Titi.jpg');
+}
+
+.chat .circle4 {
+    background-image: url('resources/Puji.jpg');
+}
+
+.chat .circle5 {
+    background-image: url('resources/Warm.jpg');
+}
+
+.chat .circle6 {
+    background-image: url('resources/Focus.jpg');
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-font);
+    margin: 0;
+}
+
+
+.speech-bubble {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: var(--color-font);
+    max-width: 300px;
+    word-wrap: break-word;
+    position: relative;
+    margin: 10px;
+    font-family: 'mali';
+}
+
+.message-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+    margin: 0px 24px;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Jua';
+}
+
+.message-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button img {
+    width: 30px;
+    height: 30px;
+}
+
+.button:hover img {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-footer);
+    color: var(--color-primary);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/*fade_in*/
+.fade_in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.parallax-section.fade_in--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* header */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navigation {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    margin-right: 50px;
+    color: var(--color-footer);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #E74C3C;
+}
+
+/*controls*/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleTheme,
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* Moon mode */
+body.light-mode {
+    background: var(--color-background);
+    color: var(--color-footer);
+}
+
+body.dark-mode {
+    background: #232323;
+    color: var(--color-background);
+}
+
+body.dark-mode #toggleMusic {
+    padding: 5px;
+    background-color: #FFF;
+    border-radius: 50px;
+}
+
+body.dark-mode #toggleMusic:hover {
+    padding: 5px;
+    background-color: #fffc41;
+    border-radius: 50px;
+}
+
+body.dark-mode .parallax-section {
+    background-image: url('resource/Night mode stardew.webp');
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+}
+
+body.dark-mode .navigation a {
+    color: #FFF;
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+}
+
+body.dark-mode .team-section h2 {
+    color: #FFF;
+}
+
+#toggleTheme {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.2);
+}
+
+/*ควบคุมเพลงสุดโปรดดดด*/
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggleMusic {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#toggleMusic:hover {
+    transform: scale(1.2);
+}
+
+#volumeControl {
+    width: 100px;
+    cursor: pointer;
+}
+
+/*arrow*/
+
+#arrow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    animation: none;
+}
+
+
+/* แอนิเมชันเมื่อถูกกระตุ้น */
+#arrow.animate {
+    animation: arrowFly 2s ease-in-out forwards;
+}
+
+body.dark-mode {
+    background: #2b2c2c;
+    color: #FFF;
+}
+
+body.dark-mode .text-animate {
+    background: #2b2c2c;
+    color: #FFF;
+}
+
+body.dark-mode .text-fly-curve {
+    background: #2b2c2c;
+    color: #FFF;
+}
+
+
+body.dark-mode .footer {
+    background: var(--color-footer);
+    color: var(--color-primary);
+}
+
+
+body.dark-mode header {
+    background-color: #333;
+    color: #FFF;
+}
+
+body.dark-mode .navigation a {
+    color: #FFF;
+}
+
+body.dark-mode .navigation a:hover {
+    color: #FFAA33;
+}
+
+
+body.dark-mode .logo span {
+    color: #FFF;
+}
+
+
+body.dark-mode .aim-left1,
+body.dark-mode .aim-left2 {
+    color: #FFF;
+}
+
+
+body.dark-mode .speech-bubble {
+    background-color: #333;
+    color: #FFF;
+}
+
+
+body.dark-mode #toggleTheme,
+body.dark-mode #toggleMusic {
+    color: #FFF;
+}
+
+body.dark-mode #volumeControl {
+    background-color: #444;
+}
+
+
+body.dark-mode .chat .text p {
+    color: #FFFFFF;
+}
+
+body.dark-mode #backgroundVideo {
+    filter: brightness(50%);
+}
+
+#video-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+#video-section video {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/*text-animation*/
+.text-animate-container {
+    position: relative;
+    width: 600px;
+    height: 100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.text-animate {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    color: #4B2E2E;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes flyCurve {
+    0% {
+        transform: translate(-200px, -200px) rotate(-360deg);
+        /* เริ่มจากมุมบนซ้าย */
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(50px, -100px) rotate(-180deg);
+        /* โค้งลงมาครึ่งหนึ่ง */
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        /* ตำแหน่งสุดท้าย */
+        opacity: 1;
+    }
+}
+
+@keyframes flyCircle {
+    0% {
+        transform: rotate(0deg) translateX(-300px) rotate(0deg);
+        /* เริ่มบินจากระยะไกล */
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-150px) rotate(-180deg);
+        /* บินผ่านครึ่งวง */
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(0) rotate(-360deg);
+        /* บินเข้าใกล้ */
+        opacity: 1;
+    }
+}
+
+
+.text-fly-curve {
+    display: inline-block;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    color: #4B2E2E;
+    animation: flyCurve 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .aim {
+        height: 50%;
+    }
+
+    #video-section {
+        width: 100%;
+        height: auto;
+    }
+
+    #video-section video {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .text-animate-container {
+        width: 300px;
+
+    }
+
+    .text-animate-container .text-fly-curve {
+        font-size: 3rem;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .talk-about-future h2 {
+        font-size: 20px;
+    }
+
+    .aim-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .message-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .message-buttons {
+        gap: 5px;
+    }
+
+    .button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .aim-left1 {
+        font-size: 20px;
+    }
+
+    .chat-section {
+        padding: 0 5px;
+    }
+
+    .chat .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    nav.navigation {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .video-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+}
+
+@media (max-width: 360px) {
+
+    body {
+        font-size: 8px;
+
+    }
+
+    main {
+        margin: 0 15px 15px;
+    }
+
+    header {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 8px;
+    }
+
+    .aim {
+        height: 50%;
+    }
+
+    #video-section {
+        width: 100%;
+        height: auto;
+    }
+
+    #video-section video {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .text-animate-container {
+        width: 200px;
+
+    }
+
+    .text-animate-container .text-fly-curve {
+        font-size: 1.5rem;
+    }
+
+    .navigation a {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .talk-about-future h2 {
+        font-size: 20px;
+    }
+
+    .aim-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .message-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .message-buttons {
+        gap: 5px;
+    }
+
+    .button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .aim-left1 {
+        font-size: 20px;
+    }
+
+    .chat.left {
+        height: 100px;
+    }
+
+    .chat.right {
+        height: 100px;
+    }
+
+
+    .chat-section {
+        padding: 0 5px;
+    }
+
+    .chat .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .chat .speech-bubble {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    nav.navigation {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #toggleTheme {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .video-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+}
