@@ -61,8 +61,13 @@ header {
 
 header .navigation {
     display: flex;
+    justify-content: flex-end;
+    /* จัดให้ลิงก์ไปทางขวา */
     align-items: center;
     gap: 20px;
+    /* ระยะห่างระหว่างลิงก์ */
+    margin-left: auto;
+    /* ดันไปทางขวาสุด */
 }
 
 header .navigation a {
@@ -543,6 +548,10 @@ body.dark-mode .team-section h2 {
 }
 
 @media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -591,74 +600,116 @@ body.dark-mode .team-section h2 {
 }
 
 @media (max-width: 480px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .icons {
-        width: 250px;
-        height: 150px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 2px 5px;
+        gap: 5px;
+        flex-wrap: nowrap;
+        /* ไม่ให้มีการแยกแถว */
     }
 
-    header .logo {
-        font-size: 22px;
-        margin-right: 30px;
-        text-align: left;
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 3px;
     }
 
-    header .logo span {
-        font-size: 10px;
-        margin-right: 50px;
-        text-align: left;
+    .logo img {
+        height: 18px;
     }
 
-    header .navigation .top {
+    .logo span {
+        font-size: 12px;
+    }
+
+    .navigation {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .controls {
+        display: flex;
         justify-content: flex-end;
-        gap: 10px;
-        width: 10px;
+        align-items: center;
+        gap: 5px;
     }
 
-    header .navigation .top a {
-        font-size: 5px;
-
+    #toggleTheme,
+    #toggleMusic {
+        font-size: 14px;
     }
 
+    #volumeControl {
+        width: 60px;
+    }
 
+    /* Welcome Section */
     .welcome-section {
-        padding: 30px 10px;
+        padding: 10px;
+        text-align: center;
     }
 
     .welcome-section h1 {
-        font-size: 30px;
+        font-size: 20px;
+        margin-bottom: 8px;
     }
 
     .welcome-section .icons img {
-        height: 100px;
-        margin: 0 3px;
+        height: 50px;
     }
 
     .welcome-section .icons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
+    /* Parallax Section */
     .parallax-section {
-        height: 40vh;
+        height: 50vh;
+        background-size: cover;
+    }
+
+    .parallax-section h1 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    /* Team Section */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .team-card {
+        height: auto;
+        padding: 5px;
+    }
+
+    /* Guest Book Section */
+    .guest-book-section {
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 10px;
+        padding: 5px;
     }
 }
+
 
 @media (max-width: 320px) {
     body {
