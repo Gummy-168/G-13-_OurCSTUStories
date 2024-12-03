@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fade_in">
+        <div class="logo">
+            <img src="resource/logo.png" alt="Logo" class="logo-image">
+            Our CSTU Story
+        </div>
+        <nav class="navigation">
+            <a href="#home" class="HOME">HOME</a>
+            <a href="#journey" class="HOME">JOURNEY</a>
+            <a href="#future" class="HOME">FUTURE</a>
+            <button id="toggleTheme">🌙</button>
+            <button id="toggleMusic">🎵</button>
+            <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5">
+            <audio id="backgroundMusic" loop>
+                <source src="resource/Stardew Valley OST Fall Ghost Synth.mp3" type="audio/mpeg">
+            </audio>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <section class="fade_in welcome-section" id="home">
+            <h1 id="typing-text"></h1>
+            <div class="icons"><video id="themeVideo" autoplay loop muted playsinline>
+                    <source id="videoSource" src="resource/lv_0_20241201012232 (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <canvas id="visualizer"></canvas>
+        </section>
+        <hr>
+
+        <section class="journey-section">
+
+            <div class="fade_in journey-row">
+                <div class="image-box">
+                    <img src="resource/09b284ec-e08d-4200-b181-8e4e7c88abf7.jpg" alt="Image 1">
+                </div>
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นางสาวชัญญานุช สายหงษ์ </p>
+                        <p>ปี 1 หาเพื่อนใหม่</p>
+                        <p>ปี 2 ค้นหาว่าตัวเองอยากเรียนวิชาโทอะไรต่อ</p>
+                        <p>ปี 3 ได้ไปฝึกงาน</p>
+                        <p>ปี 4 เรียนจบภายในเทอม 2</p>
+                    </div>
+                    <div class="iconforall red-icon">
+                        <img src="resource/red.png" alt="Red Icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="fade_in journey-row">
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นายรัฐภูมิ แสงคํามา </p>
+                        <p>ปี 1 ปรับตัวกับการเรียนในระดับมหาวิทยาลัย</p>
+                        <p>ปี 2 ค้นหาสิ่งที่ตัวเองสนใจในวิชาเอก ลองลงเรียนวิชาเสริมที่ช่วยพัฒนาทักษะ</p>
+                        <p>ปี 3 พัฒนาทักษะเพื่อเตรียมตัวสำหรับการทำงานวางแผนหัวข้อหรือแนวทางสำหรับโปรเจกต์จบ</p>
+                        <p>ปี 4 ทำโปรเจกต์จบหรือการฝึกงานขั้นสูงสมัครงานหรือวางแผนเรียนต่อ</p>
+                    </div>
+                    <div class="iconforall blue-icon">
+                        <img src="resource/blue.png" alt="Blue Icon">
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="resource/0c5a9a06-78f8-4e21-994d-a22deb6c4f7a.jpg" alt="Image 2">
+                </div>
+            </div>
+
+
+            <!-- Row 3 -->
+            <div class="fade_in journey-row">
+                <div class="image-box">
+                    <img src="resource/9dd1a32b-23fe-4547-a30f-73d905ee7b35.jpg" alt="Image 3">
+                </div>
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นางสาวภัทรินทร์ แซ่ว่อง </p>
+                        <p>ปี 1 เก็บพื้นฐานให้แน่น เกรดไม่ต่ำกว่า3</p>
+                        <p>ปี 2 ฝึกเขียนโปรแกรมให้คล่อง</p>
+                        <p>ปี 3 เลือกเรียนสายให้เหมาะกับตัวเอง</p>
+                        <p>ปี 4 เรียนจบได้เกียรตินิยม ไปฝึกงานด้านที่ชอบ</p>
+                    </div>
+                    <div class="iconforall green-icon">
+                        <img src="resource/green.png" alt="Green Icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="fade_in journey-row">
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นายกนกพจน์ กาญจนประทุม</p>
+                        <p>ปี 1 การปรับตัวเเละเริ่มต้นใหม่</p>
+                        <p>ปี 2 เริ่มลงลึกเเละค้นหาตัวเองในสิ่งที่ตนเองชอบ</p>
+                        <p>ปี 3 ความรับผิดชอบเเละการเตรียมตัวเริ่มมองหาเป้าหมายในอนาคต</p>
+                        <p>ปี 4 เริ่มสมัครงานหรือวางเเผนเรียนต่อ</p>
+                    </div>
+                    <div class="iconforall yellow-icon">
+                        <img src="resource/yellow.png" alt="Yellow Icon">
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="resource/bad41f52-1243-49bf-9c3f-142afd6267c4.jpg" alt="Image 4">
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="fade_in journey-row">
+                <div class="image-box">
+                    <img src="resource/d566f669-2bce-453f-a8cb-505512285949.jpg" alt="Image 5">
+                </div>
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นายนวพรรษ ทําไธสง</p>
+                        <p>ปี 1 เล่นกีฬาทุกอย่างที่อยากเล่น</p>
+                        <p>ปี 2 ค้นหาสิ่งที่ตนเองอยากเรียน</p>
+                        <p>ปี 3 ฝึกงานหรือประสบการณ์ใหม่ๆ</p>
+                        <p>ปี 4 มีเเผนอนาคตที่ชัดเจน</p>
+                    </div>
+                    <div class="iconforall pink-icon">
+                        <img src="resource/pink.png" alt="Pink Icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="fade_in journey-row">
+                <div class="text-box">
+                    <div class="thai">
+                        <p>ชื่อ-สกุล : นายภูจิร ยังเหลือ </p>
+                        <p>ปี 1 ตั้งใจหาความรู้เเละค้นหาตัวเอง</p>
+                        <p>ปี 2 ฝึกฝนฝีมือในด้านต่างๆ</p>
+                        <p>ปี 3 เตรียมตัวฝึกงานหาประสบการณ์ใหม่ๆ</p>
+                        <p>ปี 4 เตรียมทักษะในการเข้าทํางาน</p>
+                    </div>
+                    <div class="iconforall purple-icon">
+                        <img src="resource/purple.png" alt="Purple Icon">
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="resource/223394b2-03d1-45ff-a11b-615c9bec7438.jpg" alt="Image 6">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 @CSTU. All rights reserved.</p>
+    </footer>
+
+    <script src="journey.js"></script>
+</body>
+
+</html>
